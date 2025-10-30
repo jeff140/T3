@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|proyecto_T3.csproj|c:\\users\\irwin\\desktop\\t3\\proyecto_t3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|proyecto_T3.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\irwin\\desktop\\t3\\capadatos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6662064F-BB1C-4B9D-B270-50247B4C818E}|..\\CapaEntidad\\CapaEntidad.csproj|c:\\users\\irwin\\desktop\\t3\\capaentidad\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\irwin\\desktop\\t3\\capadatos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3359BBBF-3968-453C-BE94-43D43D59BA78}|..\\CapaLogica\\CapaLogica.csproj|c:\\users\\irwin\\desktop\\t3\\capalogica\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +26,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Conexion.cs",
+              "RelativeDocumentMoniker": "..\\CapaDatos\\Conexion.cs",
+              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Conexion.cs",
+              "RelativeToolTip": "..\\CapaDatos\\Conexion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T05:24:04.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\CapaDatos\\Class1.cs",
+              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Class1.cs",
+              "RelativeToolTip": "..\\CapaDatos\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T04:59:33.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaLogica\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\CapaLogica\\Class1.cs",
+              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaLogica\\Class1.cs",
+              "RelativeToolTip": "..\\CapaLogica\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T04:59:14.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaEntidad\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\CapaEntidad\\Class1.cs",
+              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaEntidad\\Class1.cs",
+              "RelativeToolTip": "..\\CapaEntidad\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T04:58:53.247Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
