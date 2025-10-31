@@ -1,0 +1,11 @@
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\obj\Debug\CapaLogica.csproj.Up2Date
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaLogica\obj\Debug\CapaLogica.pdb

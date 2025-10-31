@@ -1,0 +1,6 @@
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\obj\Debug\CapaEntidad.pdb

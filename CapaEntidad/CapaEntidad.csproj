@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="entCategoria.cs" />
     <Compile Include="entDetalleOrdenCompra.cs" />
     <Compile Include="entOrden_Compra.cs" />
+    <Compile Include="entProducto.cs" />
+    <Compile Include="entProveedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

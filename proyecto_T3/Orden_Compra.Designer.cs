@@ -70,6 +70,7 @@
             this.btneliminar.TabIndex = 4;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btncerrar
             // 
@@ -79,6 +80,7 @@
             this.btncerrar.TabIndex = 3;
             this.btncerrar.Text = "Cerrar";
             this.btncerrar.UseVisualStyleBackColor = true;
+            this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
             // btnguardar
             // 
@@ -88,6 +90,7 @@
             this.btnguardar.TabIndex = 2;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btnnuevo
             // 
@@ -97,6 +100,7 @@
             this.btnnuevo.TabIndex = 0;
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // groupBox4
             // 
@@ -120,6 +124,7 @@
             this.btneditar.TabIndex = 1;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // dgvProductos
             // 
@@ -129,6 +134,7 @@
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.Size = new System.Drawing.Size(942, 245);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // groupBox3
             // 
@@ -149,6 +155,7 @@
             this.btnagregar.TabIndex = 0;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // groupBox2
             // 
@@ -189,6 +196,7 @@
             this.txtproductos.Name = "txtproductos";
             this.txtproductos.Size = new System.Drawing.Size(293, 20);
             this.txtproductos.TabIndex = 13;
+            this.txtproductos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtproductos_KeyDown);
             // 
             // txtprecio_unitario
             // 
@@ -262,6 +270,7 @@
             this.txtproveedor.Name = "txtproveedor";
             this.txtproveedor.Size = new System.Drawing.Size(426, 20);
             this.txtproveedor.TabIndex = 7;
+            this.txtproveedor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtproveedor_KeyDown);
             // 
             // txttotal
             // 

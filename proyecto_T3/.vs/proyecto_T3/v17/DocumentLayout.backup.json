@@ -1,15 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\proyecto_T3\\",
+  "WorkspaceRootPath": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\jampier sanchez inc\\source\\repos\\t3\\capadatos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\proyecto_t3\\orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6662064F-BB1C-4B9D-B270-50247B4C818E}|..\\CapaEntidad\\CapaEntidad.csproj|c:\\users\\jampier sanchez inc\\source\\repos\\t3\\capaentidad\\entorden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\jampier sanchez inc\\source\\repos\\t3\\capadatos\\datdetalleordencompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6662064F-BB1C-4B9D-B270-50247B4C818E}|..\\CapaEntidad\\CapaEntidad.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\capaentidad\\entproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3359BBBF-3968-453C-BE94-43D43D59BA78}|..\\CapaLogica\\CapaLogica.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\capalogica\\logproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3359BBBF-3968-453C-BE94-43D43D59BA78}|..\\CapaLogica\\CapaLogica.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\capalogica\\logproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6662064F-BB1C-4B9D-B270-50247B4C818E}|..\\CapaEntidad\\CapaEntidad.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\capaentidad\\entproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\capadatos\\datproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\capadatos\\datproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\capadatos\\datcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\proyecto_t3\\orden_compra.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:orden_compra.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\registrarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:registrarcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\jampier sanchez inc\\onedrive - universidad privada del norte\\documentos\\nueva carpeta\\t3\\capadatos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\registrarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:registrarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\registrarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:registrarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,46 +62,193 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Conexion.cs",
-              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\CapaDatos\\Conexion.cs",
-              "RelativeDocumentMoniker": "..\\CapaDatos\\Conexion.cs",
-              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\CapaDatos\\Conexion.cs",
-              "RelativeToolTip": "..\\CapaDatos\\Conexion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "logProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaLogica\\logProducto.cs",
+              "RelativeDocumentMoniker": "..\\CapaLogica\\logProducto.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaLogica\\logProducto.cs",
+              "RelativeToolTip": "..\\CapaLogica\\logProducto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T06:21:55.547Z",
+              "WhenOpened": "2025-10-31T22:07:09.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "entOrden_Compra.cs",
-              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\CapaEntidad\\entOrden_Compra.cs",
-              "RelativeDocumentMoniker": "..\\CapaEntidad\\entOrden_Compra.cs",
-              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\CapaEntidad\\entOrden_Compra.cs",
-              "RelativeToolTip": "..\\CapaEntidad\\entOrden_Compra.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "entProveedor.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaEntidad\\entProveedor.cs",
+              "RelativeDocumentMoniker": "..\\CapaEntidad\\entProveedor.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaEntidad\\entProveedor.cs",
+              "RelativeToolTip": "..\\CapaEntidad\\entProveedor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T06:11:00.529Z",
+              "WhenOpened": "2025-10-31T22:04:57.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "datDetalleOrdenCompra.cs",
-              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\CapaDatos\\datDetalleOrdenCompra.cs",
-              "RelativeDocumentMoniker": "..\\CapaDatos\\datDetalleOrdenCompra.cs",
-              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\CapaDatos\\datDetalleOrdenCompra.cs",
-              "RelativeToolTip": "..\\CapaDatos\\datDetalleOrdenCompra.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowIoAAAABAAAAAAAAAA==",
+              "Title": "entProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaEntidad\\entProducto.cs",
+              "RelativeDocumentMoniker": "..\\CapaEntidad\\entProducto.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaEntidad\\entProducto.cs",
+              "RelativeToolTip": "..\\CapaEntidad\\entProducto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T06:08:51.756Z",
+              "WhenOpened": "2025-10-31T22:04:25.69Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Orden_Compra.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\Orden_Compra.cs",
+              "RelativeDocumentMoniker": "Orden_Compra.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\Orden_Compra.cs",
+              "RelativeToolTip": "Orden_Compra.cs",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAUwPMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:46:15.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Orden_Compra.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\Orden_Compra.cs",
+              "RelativeDocumentMoniker": "Orden_Compra.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\Orden_Compra.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Orden_Compra.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:22:46.666Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "logProveedor.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaLogica\\logProveedor.cs",
+              "RelativeDocumentMoniker": "..\\CapaLogica\\logProveedor.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaLogica\\logProveedor.cs",
+              "RelativeToolTip": "..\\CapaLogica\\logProveedor.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T22:08:13.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "datProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaDatos\\datProducto.cs",
+              "RelativeDocumentMoniker": "..\\CapaDatos\\datProducto.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaDatos\\datProducto.cs",
+              "RelativeToolTip": "..\\CapaDatos\\datProducto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T22:07:35.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "datProveedor.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaDatos\\datProveedor.cs",
+              "RelativeDocumentMoniker": "..\\CapaDatos\\datProveedor.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaDatos\\datProveedor.cs",
+              "RelativeToolTip": "..\\CapaDatos\\datProveedor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T22:03:09.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "datCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaDatos\\datCategoria.cs",
+              "RelativeDocumentMoniker": "..\\CapaDatos\\datCategoria.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaDatos\\datCategoria.cs",
+              "RelativeToolTip": "..\\CapaDatos\\datCategoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:22:26.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Orden_Compra.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\Orden_Compra.Designer.cs",
+              "RelativeDocumentMoniker": "Orden_Compra.Designer.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\Orden_Compra.Designer.cs",
+              "RelativeToolTip": "Orden_Compra.Designer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwHgBAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:41:08.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaDatos\\Conexion.cs",
+              "RelativeDocumentMoniker": "..\\CapaDatos\\Conexion.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\CapaDatos\\Conexion.cs",
+              "RelativeToolTip": "..\\CapaDatos\\Conexion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:32:55.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegistrarCategoria.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\RegistrarCategoria.cs",
+              "RelativeDocumentMoniker": "RegistrarCategoria.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\RegistrarCategoria.cs [Dise\u00F1o]",
+              "RelativeToolTip": "RegistrarCategoria.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:35:55.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegistrarProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\RegistrarProductos.cs",
+              "RelativeDocumentMoniker": "RegistrarProductos.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\RegistrarProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "RegistrarProductos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:13:05.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegistrarProductos.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\RegistrarProductos.cs",
+              "RelativeDocumentMoniker": "RegistrarProductos.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\RegistrarProductos.cs",
+              "RelativeToolTip": "RegistrarProductos.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAIwAcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:09:39.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\OneDrive - Universidad Privada del Norte\\Documentos\\Nueva carpeta\\T3\\proyecto_T3\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:22:47.917Z"
             }
           ]
         }
