@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\irwin\\Desktop\\t3\\proyecto_T3\\",
+  "WorkspaceRootPath": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\proyecto_T3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|proyecto_T3.csproj|c:\\users\\irwin\\desktop\\t3\\proyecto_t3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|proyecto_T3.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|c:\\users\\jampier sanchez inc\\source\\repos\\t3\\proyecto_t3\\orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:orden_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\irwin\\desktop\\t3\\capadatos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|c:\\users\\jampier sanchez inc\\source\\repos\\t3\\proyecto_t3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6662064F-BB1C-4B9D-B270-50247B4C818E}|..\\CapaEntidad\\CapaEntidad.csproj|c:\\users\\irwin\\desktop\\t3\\capaentidad\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\irwin\\desktop\\t3\\capadatos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3359BBBF-3968-453C-BE94-43D43D59BA78}|..\\CapaLogica\\CapaLogica.csproj|c:\\users\\irwin\\desktop\\t3\\capalogica\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\irwin\\Desktop\\t3\\CapaLogica\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\irwin\\Desktop\\t3\\CapaEntidad\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,67 +30,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Orden_Compra.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\proyecto_T3\\Orden_Compra.cs",
+              "RelativeDocumentMoniker": "Orden_Compra.cs",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\proyecto_T3\\Orden_Compra.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Orden_Compra.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T05:22:06.033Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Conexion.cs",
               "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Conexion.cs",
-              "RelativeDocumentMoniker": "..\\CapaDatos\\Conexion.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\irwin\\Desktop\\t3\\CapaDatos\\Conexion.cs",
               "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Conexion.cs",
-              "RelativeToolTip": "..\\CapaDatos\\Conexion.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\irwin\\Desktop\\t3\\CapaDatos\\Conexion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T05:24:04.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T05:24:04.351Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\CapaDatos\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\irwin\\Desktop\\t3\\CapaDatos\\Class1.cs",
               "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\Class1.cs",
-              "RelativeToolTip": "..\\CapaDatos\\Class1.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\irwin\\Desktop\\t3\\CapaDatos\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T04:59:33.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T04:59:33.857Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaLogica\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\CapaLogica\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\irwin\\Desktop\\t3\\CapaLogica\\Class1.cs",
               "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaLogica\\Class1.cs",
-              "RelativeToolTip": "..\\CapaLogica\\Class1.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\irwin\\Desktop\\t3\\CapaLogica\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T04:59:14.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T04:59:14.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaEntidad\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\CapaEntidad\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\irwin\\Desktop\\t3\\CapaEntidad\\Class1.cs",
               "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaEntidad\\Class1.cs",
-              "RelativeToolTip": "..\\CapaEntidad\\Class1.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\irwin\\Desktop\\t3\\CapaEntidad\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T04:58:53.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T04:58:53.247Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\proyecto_T3\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\proyecto_T3\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\proyecto_T3\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Jampier Sanchez Inc\\source\\repos\\T3\\proyecto_T3\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T05:11:48.481Z",
