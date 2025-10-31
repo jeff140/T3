@@ -1,10 +1,14 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaLogica;
+using proyecto_T3;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacionT3;
 
-namespace proyecto_T3
+namespace CapaPresentacionT3
 {
     internal static class Program
     {
@@ -16,7 +20,9 @@ namespace proyecto_T3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // 🔸 Aquí indicas qué formulario se abrirá primero
+            Application.Run(new ventaProducto());
         }
     }
 }

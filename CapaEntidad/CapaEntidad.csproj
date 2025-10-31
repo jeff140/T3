@@ -41,10 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="entCliente.cs" />
-    <Compile Include="entDetalleOrdenCompra.cs" />
-    <Compile Include="entOrden_Compra.cs" />
+    <Compile Include="EntDetalleVenta.cs" />
+    <Compile Include="EntProducto.cs" />
+    <Compile Include="Entventa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

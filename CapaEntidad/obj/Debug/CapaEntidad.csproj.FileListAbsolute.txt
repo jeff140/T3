@@ -1,6 +1,6 @@
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\bin\Debug\CapaEntidad.dll
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\bin\Debug\CapaEntidad.pdb
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\obj\Debug\CapaEntidad.dll
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\irwin\Desktop\t3\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\irwin\Desktop\t3\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\irwin\Desktop\t3\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\irwin\Desktop\t3\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\irwin\Desktop\t3\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\irwin\Desktop\t3\CapaEntidad\obj\Debug\CapaEntidad.pdb

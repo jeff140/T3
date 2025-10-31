@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace CapaDatos
 {
@@ -14,17 +14,16 @@ namespace CapaDatos
         public static Conexion Instancia
         {
             get { return Conexion._instancia; }
+
         }
 
-
-        //CONECTAR
         public SqlConnection Conectar()
         {
-            SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Data Source=DESKTOP-3S7IB5J\\SQLEXPRESS01; Initial Catalog = DB_Cliente;" +//"User ID=sa; Password=123";
-             "Integrated Security=true";
+                SqlConnection cn = new SqlConnection();
+                cn.ConnectionString = "Data Source=.\\SQLEXPRESS; Initial Catalog = DB_VentasT3;" +//"User ID=sa; Password=123";
+                 "Integrated Security=true";
 
-            return cn;
+                return cn;
         }
     }
 }

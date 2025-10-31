@@ -1,11 +1,11 @@
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\bin\Debug\CapaLogica.dll
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\bin\Debug\CapaLogica.pdb
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\bin\Debug\CapaDatos.dll
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\bin\Debug\CapaEntidad.dll
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\bin\Debug\CapaDatos.pdb
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\bin\Debug\CapaEntidad.pdb
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\obj\Debug\CapaLogica.csproj.Up2Date
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\obj\Debug\CapaLogica.dll
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\irwin\Desktop\t3\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\irwin\Desktop\t3\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\irwin\Desktop\t3\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\irwin\Desktop\t3\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\irwin\Desktop\t3\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\irwin\Desktop\t3\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\irwin\Desktop\t3\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\irwin\Desktop\t3\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\irwin\Desktop\t3\CapaLogica\obj\Debug\CapaLogica.csproj.Up2Date
+C:\Users\irwin\Desktop\t3\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\irwin\Desktop\t3\CapaLogica\obj\Debug\CapaLogica.pdb

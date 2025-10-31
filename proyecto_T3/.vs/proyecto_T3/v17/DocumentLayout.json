@@ -1,26 +1,23 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\",
+  "WorkspaceRootPath": "C:\\Users\\irwin\\Desktop\\t3\\proyecto_T3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\proyecto_t3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|c:\\users\\irwin\\desktop\\t3\\proyecto_t3\\ventaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:ventaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\proyecto_t3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6662064F-BB1C-4B9D-B270-50247B4C818E}|..\\CapaEntidad\\CapaEntidad.csproj|c:\\users\\irwin\\desktop\\t3\\capaentidad\\entventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\capadatos\\datcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\irwin\\desktop\\t3\\capadatos\\datventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\capadatos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3359BBBF-3968-453C-BE94-43D43D59BA78}|..\\CapaLogica\\CapaLogica.csproj|c:\\users\\irwin\\desktop\\t3\\capalogica\\logventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3359BBBF-3968-453C-BE94-43D43D59BA78}|..\\CapaLogica\\CapaLogica.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\capalogica\\logcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6662064F-BB1C-4B9D-B270-50247B4C818E}|..\\CapaEntidad\\CapaEntidad.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\capaentidad\\entcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|C:\\Users\\irwin\\Desktop\\t3\\proyecto_T3\\ventaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:ventaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,88 +27,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ventaProducto.cs",
+              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\proyecto_T3\\ventaProducto.cs",
+              "RelativeDocumentMoniker": "ventaProducto.cs",
+              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\proyecto_T3\\ventaProducto.cs",
+              "RelativeToolTip": "ventaProducto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T19:42:36.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\Form1.cs*",
-              "RelativeToolTip": "Form1.cs*",
-              "ViewState": "AgIAAMUBAAAAAAAAAAAiwNkBAAAzAAAAAAAAAA==",
+              "Title": "Entventa.cs",
+              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaEntidad\\Entventa.cs",
+              "RelativeDocumentMoniker": "..\\CapaEntidad\\Entventa.cs",
+              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaEntidad\\Entventa.cs",
+              "RelativeToolTip": "..\\CapaEntidad\\Entventa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:33:06.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Conexion.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaDatos\\Conexion.cs",
-              "RelativeDocumentMoniker": "..\\CapaDatos\\Conexion.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaDatos\\Conexion.cs",
-              "RelativeToolTip": "..\\CapaDatos\\Conexion.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAkwBcAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:13:00.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "logCliente.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaLogica\\logCliente.cs",
-              "RelativeDocumentMoniker": "..\\CapaLogica\\logCliente.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaLogica\\logCliente.cs",
-              "RelativeToolTip": "..\\CapaLogica\\logCliente.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAAE4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:12:35.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T19:38:46.209Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "datCliente.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaDatos\\datCliente.cs",
-              "RelativeDocumentMoniker": "..\\CapaDatos\\datCliente.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaDatos\\datCliente.cs",
-              "RelativeToolTip": "..\\CapaDatos\\datCliente.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAG8AAAABAAAAAAAAAA==",
+              "Title": "DatVenta.cs",
+              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\DatVenta.cs",
+              "RelativeDocumentMoniker": "..\\CapaDatos\\DatVenta.cs",
+              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaDatos\\DatVenta.cs",
+              "RelativeToolTip": "..\\CapaDatos\\DatVenta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:11:17.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T19:35:41.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]*",
+              "DocumentIndex": 3,
+              "Title": "LogVenta.cs",
+              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\CapaLogica\\LogVenta.cs",
+              "RelativeDocumentMoniker": "..\\CapaLogica\\LogVenta.cs",
+              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\CapaLogica\\LogVenta.cs",
+              "RelativeToolTip": "..\\CapaLogica\\LogVenta.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwCoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:01:10.458Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2025-10-31T19:29:36.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "entCliente.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaEntidad\\entCliente.cs",
-              "RelativeDocumentMoniker": "..\\CapaEntidad\\entCliente.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaEntidad\\entCliente.cs",
-              "RelativeToolTip": "..\\CapaEntidad\\entCliente.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBIAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ventaProducto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\irwin\\Desktop\\t3\\proyecto_T3\\ventaProducto.cs",
+              "RelativeDocumentMoniker": "ventaProducto.cs",
+              "ToolTip": "C:\\Users\\irwin\\Desktop\\t3\\proyecto_T3\\ventaProducto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ventaProducto.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:12:10.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T10:37:48.675Z"
             }
           ]
         }
