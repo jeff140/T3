@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="datCliente.cs" />
+    <Compile Include="datCategoria.cs" />
     <Compile Include="datDetalleOrdenCompra.cs" />
     <Compile Include="datOrden_Compra.cs" />
+    <Compile Include="datProducto.cs" />
+    <Compile Include="datProveedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,12 +1,6 @@
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\bin\Debug\CapaEntidad.dll
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\bin\Debug\CapaEntidad.pdb
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\obj\Debug\CapaEntidad.dll
-C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaEntidad\obj\Debug\CapaEntidad.pdb
-C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaEntidad\bin\Debug\CapaEntidad.dll
-C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaEntidad\bin\Debug\CapaEntidad.pdb
-C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
-C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaEntidad\obj\Debug\CapaEntidad.dll
-C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\CapaEntidad\obj\Debug\CapaEntidad.pdb
