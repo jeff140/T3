@@ -543,5 +543,29 @@ namespace proyecto_T3
                     "Error de Mapeo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            RegistrarProductos nuevoFormulario = new RegistrarProductos();
+            nuevoFormulario.Show();
+        }
+
+        private void btnProveedor_Click(object sender, EventArgs e)
+        {
+            RegistrarProductos nuevoFormulario = new RegistrarProductos();
+            nuevoFormulario.Show();
+        }
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            RegistrarCategoria nuevoFormulario = new RegistrarCategoria();
+            nuevoFormulario.Show();
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            RegistrarCliente nuevoFormulario = new RegistrarCliente();
+            nuevoFormulario.Show();
+        }
     }
 }

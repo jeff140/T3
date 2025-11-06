@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\CapaDatos",
+    "\\CapaEntidad",
+    "\\CapaLogica",
     "\\proyecto_T3"
   ],
-  "SelectedNode": "\\proyecto_T3\\Orden_Compra.cs",
   "PreviewInSolutionExplorer": false
 }

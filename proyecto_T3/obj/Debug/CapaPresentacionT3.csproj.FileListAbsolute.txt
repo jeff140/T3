@@ -19,3 +19,27 @@ C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos
 C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\proyecto_T3\bin\Debug\CapaLogica.pdb
 C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\proyecto_T3\bin\Debug\CapaDatos.pdb
 C:\Users\Jampier Sanchez Inc\OneDrive - Universidad Privada del Norte\Documentos\Nueva carpeta\T3\proyecto_T3\obj\Debug\CapaPres.B6C9AE71.Up2Date
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\CapaPresentacionT3.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\proyecto_T3.exe.config
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\proyecto_T3.Ingreso.resources
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\proyecto_T3.Orden_Compra.resources
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\proyecto_T3.Properties.Resources.resources
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\proyecto_T3.RegistrarCategoria.resources
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\proyecto_T3.RegistrarCliente.resources
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\proyecto_T3.RegistrarProductos.resources
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\CapaPresentacionT3.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\CapaPresentacionT3.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\proyecto_T3.exe
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\proyecto_T3.pdb
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\proyecto_T3.exe.config
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\proyecto_T3.exe
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\proyecto_T3.pdb
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\CapaEntidad.dll
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\CapaLogica.dll
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\CapaDatos.dll
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\CapaEntidad.pdb
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\CapaLogica.pdb
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\bin\Debug\CapaDatos.pdb
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\proyecto_T3\obj\Debug\CapaPres.B6C9AE71.Up2Date

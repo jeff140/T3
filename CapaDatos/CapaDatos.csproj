@@ -48,6 +48,7 @@
     <Compile Include="datOrden_Compra.cs" />
     <Compile Include="datProducto.cs" />
     <Compile Include="datProveedor.cs" />
+    <Compile Include="datCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

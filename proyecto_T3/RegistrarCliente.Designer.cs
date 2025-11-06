@@ -51,6 +51,8 @@
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnOrdenCompra = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnProveedor = new System.Windows.Forms.Button();
+            this.btnCategoria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
@@ -205,7 +207,7 @@
             // 
             this.btnCotizacion.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCotizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCotizacion.Location = new System.Drawing.Point(14, 241);
+            this.btnCotizacion.Location = new System.Drawing.Point(14, 305);
             this.btnCotizacion.Name = "btnCotizacion";
             this.btnCotizacion.Size = new System.Drawing.Size(159, 35);
             this.btnCotizacion.TabIndex = 29;
@@ -216,7 +218,7 @@
             // 
             this.btnVenta.BackColor = System.Drawing.Color.AliceBlue;
             this.btnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVenta.Location = new System.Drawing.Point(14, 313);
+            this.btnVenta.Location = new System.Drawing.Point(12, 377);
             this.btnVenta.Name = "btnVenta";
             this.btnVenta.Size = new System.Drawing.Size(159, 35);
             this.btnVenta.TabIndex = 30;
@@ -227,29 +229,31 @@
             // 
             this.btnProducto.BackColor = System.Drawing.Color.AliceBlue;
             this.btnProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducto.Location = new System.Drawing.Point(14, 174);
+            this.btnProducto.Location = new System.Drawing.Point(14, 166);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(159, 35);
             this.btnProducto.TabIndex = 31;
             this.btnProducto.Text = "Producto";
             this.btnProducto.UseVisualStyleBackColor = false;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // btnCliente
             // 
             this.btnCliente.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCliente.Location = new System.Drawing.Point(14, 107);
+            this.btnCliente.Location = new System.Drawing.Point(14, 26);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(159, 35);
             this.btnCliente.TabIndex = 32;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = false;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnOrdenCompra
             // 
             this.btnOrdenCompra.BackColor = System.Drawing.Color.AliceBlue;
             this.btnOrdenCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdenCompra.Location = new System.Drawing.Point(14, 379);
+            this.btnOrdenCompra.Location = new System.Drawing.Point(14, 447);
             this.btnOrdenCompra.Name = "btnOrdenCompra";
             this.btnOrdenCompra.Size = new System.Drawing.Size(159, 35);
             this.btnOrdenCompra.TabIndex = 33;
@@ -269,12 +273,38 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // btnProveedor
+            // 
+            this.btnProveedor.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedor.Location = new System.Drawing.Point(12, 97);
+            this.btnProveedor.Name = "btnProveedor";
+            this.btnProveedor.Size = new System.Drawing.Size(159, 35);
+            this.btnProveedor.TabIndex = 35;
+            this.btnProveedor.Text = "Proveedor";
+            this.btnProveedor.UseVisualStyleBackColor = false;
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
+            // 
+            // btnCategoria
+            // 
+            this.btnCategoria.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoria.Location = new System.Drawing.Point(14, 236);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.Size = new System.Drawing.Size(159, 35);
+            this.btnCategoria.TabIndex = 36;
+            this.btnCategoria.Text = "Categoría";
+            this.btnCategoria.UseVisualStyleBackColor = false;
+            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
+            // 
             // RegistrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1207, 509);
+            this.Controls.Add(this.btnCategoria);
+            this.Controls.Add(this.btnProveedor);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnOrdenCompra);
             this.Controls.Add(this.btnCliente);
@@ -332,6 +362,8 @@
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnOrdenCompra;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnProveedor;
+        private System.Windows.Forms.Button btnCategoria;
     }
 }
 
