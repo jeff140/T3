@@ -1,0 +1,11 @@
+# Ignorar archivos y directorios de Visual Studio y C#
+[Bb]in/
+[Oo]bj/
+.vs/
+*.pdb
+*.suo
+*.user
+*.exe
+*.dll
+*.cache
+*.dtbcache.json
