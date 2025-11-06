@@ -106,7 +106,25 @@ namespace CapaDatos
 
             return edita;
         }
+        // ===== ELIMINAR CLIENTE =====
+        public bool EliminarCliente(entCliente cli)
+        {
+            bool eliminar = false;
 
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            using (SqlCommand cmd = new SqlCommand("spEliminarCliente", cn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@idCliente", cli.idCliente);
+
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                eliminar = (i > 0);
+            }
+
+            return eliminar;
+        }
         #endregion
     }
 }

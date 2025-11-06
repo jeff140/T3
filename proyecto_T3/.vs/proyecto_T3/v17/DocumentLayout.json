@@ -1,26 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\",
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\proyecto_t3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\usuario\\documents\\visual studio 2022\\t3_moanso\\capadatos\\datcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\proyecto_t3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3359BBBF-3968-453C-BE94-43D43D59BA78}|..\\CapaLogica\\CapaLogica.csproj|c:\\users\\usuario\\documents\\visual studio 2022\\t3_moanso\\capalogica\\logcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\capadatos\\datcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\registrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:registrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\capadatos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6662064F-BB1C-4B9D-B270-50247B4C818E}|..\\CapaEntidad\\CapaEntidad.csproj|c:\\users\\usuario\\documents\\visual studio 2022\\t3_moanso\\capaentidad\\entcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3359BBBF-3968-453C-BE94-43D43D59BA78}|..\\CapaLogica\\CapaLogica.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\capalogica\\logcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\registrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:registrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6662064F-BB1C-4B9D-B270-50247B4C818E}|..\\CapaEntidad\\CapaEntidad.csproj|c:\\users\\user\\documents\\visual studio 2022\\t3git\\capaentidad\\entcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A65201F-29EC-4719-BE84-63776CA92488}|CapaPresentacionT3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DE6A4D7-7558-4CAC-9666-A816CA2282B4}|..\\CapaDatos\\CapaDatos.csproj|c:\\users\\usuario\\documents\\visual studio 2022\\t3_moanso\\capadatos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,88 +34,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\Form1.cs*",
-              "RelativeToolTip": "Form1.cs*",
-              "ViewState": "AgIAAMUBAAAAAAAAAAAiwNkBAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:33:06.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Conexion.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaDatos\\Conexion.cs",
-              "RelativeDocumentMoniker": "..\\CapaDatos\\Conexion.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaDatos\\Conexion.cs",
-              "RelativeToolTip": "..\\CapaDatos\\Conexion.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAkwBcAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:13:00.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "logCliente.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaLogica\\logCliente.cs",
-              "RelativeDocumentMoniker": "..\\CapaLogica\\logCliente.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaLogica\\logCliente.cs",
-              "RelativeToolTip": "..\\CapaLogica\\logCliente.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAAE4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:12:35.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "datCliente.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaDatos\\datCliente.cs",
-              "RelativeDocumentMoniker": "..\\CapaDatos\\datCliente.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaDatos\\datCliente.cs",
-              "RelativeToolTip": "..\\CapaDatos\\datCliente.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAG8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:11:17.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\proyecto_T3\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:01:10.458Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "entCliente.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaEntidad\\entCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\CapaEntidad\\entCliente.cs",
               "RelativeDocumentMoniker": "..\\CapaEntidad\\entCliente.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Visual Studio 2022\\T3Git\\CapaEntidad\\entCliente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\CapaEntidad\\entCliente.cs",
               "RelativeToolTip": "..\\CapaEntidad\\entCliente.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:12:10.038Z",
+              "WhenOpened": "2025-11-05T07:48:19.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:55:36.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegistrarCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\RegistrarCliente.cs",
+              "RelativeDocumentMoniker": "RegistrarCliente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\RegistrarCliente.cs",
+              "RelativeToolTip": "RegistrarCliente.cs",
+              "ViewState": "AgIAAMUBAAAAAAAAAADwv8YBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T03:55:23.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegistrarCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\RegistrarCliente.cs",
+              "RelativeDocumentMoniker": "RegistrarCliente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\proyecto_T3\\RegistrarCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "RegistrarCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T18:01:10.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "logCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\CapaLogica\\logCliente.cs",
+              "RelativeDocumentMoniker": "..\\CapaLogica\\logCliente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\CapaLogica\\logCliente.cs",
+              "RelativeToolTip": "..\\CapaLogica\\logCliente.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T01:52:44.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "datCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\CapaDatos\\datCliente.cs",
+              "RelativeDocumentMoniker": "..\\CapaDatos\\datCliente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\CapaDatos\\datCliente.cs",
+              "RelativeToolTip": "..\\CapaDatos\\datCliente.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T05:43:25.313Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\CapaDatos\\Conexion.cs",
+              "RelativeDocumentMoniker": "..\\CapaDatos\\Conexion.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\Visual Studio 2022\\T3_MOANSO\\CapaDatos\\Conexion.cs",
+              "RelativeToolTip": "..\\CapaDatos\\Conexion.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBcAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T01:52:47.497Z"
             }
           ]
         }

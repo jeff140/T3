@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CapaDatos",
+    "\\proyecto_T3"
   ],
-  "SelectedNode": "\\proyecto_T3.sln",
+  "SelectedNode": "\\CapaDatos\\datCliente.cs",
   "PreviewInSolutionExplorer": false
 }

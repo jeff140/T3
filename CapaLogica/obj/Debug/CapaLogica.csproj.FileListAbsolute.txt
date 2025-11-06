@@ -9,3 +9,14 @@ C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\obj\Debug\CapaLogica
 C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\obj\Debug\CapaLogica.csproj.Up2Date
 C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\user\Documents\Visual Studio 2022\T3Git\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\obj\Debug\CapaLogica.csproj.Up2Date
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Usuario\Documents\Visual Studio 2022\T3_MOANSO\CapaLogica\obj\Debug\CapaLogica.pdb

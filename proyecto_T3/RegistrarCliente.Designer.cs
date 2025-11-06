@@ -1,6 +1,6 @@
 ﻿namespace proyecto_T3
 {
-    partial class Form1
+    partial class RegistrarCliente
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarCliente));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDniRuc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnOrdenCompra = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
@@ -88,13 +89,13 @@
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.Size = new System.Drawing.Size(605, 282);
             this.dgvCliente.TabIndex = 10;
-            this.dgvCliente.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellDoubleClick);
+            this.dgvCliente.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCliente_CellMouseDoubleClick);
             // 
             // dtpFechaRegistro
             // 
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(806, 356);
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(806, 359);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(268, 20);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(208, 20);
             this.dtpFechaRegistro.TabIndex = 12;
             // 
             // cmbDepartamento
@@ -157,35 +158,38 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.AliceBlue;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(341, 432);
+            this.btnModificar.Location = new System.Drawing.Point(590, 447);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(125, 35);
             this.btnModificar.TabIndex = 26;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnRegistar
             // 
+            this.btnRegistar.BackColor = System.Drawing.Color.AliceBlue;
             this.btnRegistar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistar.Location = new System.Drawing.Point(835, 432);
+            this.btnRegistar.Location = new System.Drawing.Point(347, 447);
             this.btnRegistar.Name = "btnRegistar";
             this.btnRegistar.Size = new System.Drawing.Size(125, 35);
             this.btnRegistar.TabIndex = 25;
             this.btnRegistar.Text = "Registrar";
-            this.btnRegistar.UseVisualStyleBackColor = true;
+            this.btnRegistar.UseVisualStyleBackColor = false;
             this.btnRegistar.Click += new System.EventHandler(this.btnRegistar_Click);
             // 
             // btnMostrar
             // 
+            this.btnMostrar.BackColor = System.Drawing.Color.AliceBlue;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.Location = new System.Drawing.Point(341, 217);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(125, 35);
             this.btnMostrar.TabIndex = 27;
             this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // label6
@@ -199,61 +203,79 @@
             // 
             // btnCotizacion
             // 
+            this.btnCotizacion.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCotizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCotizacion.Location = new System.Drawing.Point(14, 241);
             this.btnCotizacion.Name = "btnCotizacion";
             this.btnCotizacion.Size = new System.Drawing.Size(159, 35);
             this.btnCotizacion.TabIndex = 29;
             this.btnCotizacion.Text = "Cotización";
-            this.btnCotizacion.UseVisualStyleBackColor = true;
+            this.btnCotizacion.UseVisualStyleBackColor = false;
             // 
             // btnVenta
             // 
+            this.btnVenta.BackColor = System.Drawing.Color.AliceBlue;
             this.btnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVenta.Location = new System.Drawing.Point(14, 313);
             this.btnVenta.Name = "btnVenta";
             this.btnVenta.Size = new System.Drawing.Size(159, 35);
             this.btnVenta.TabIndex = 30;
             this.btnVenta.Text = "Venta";
-            this.btnVenta.UseVisualStyleBackColor = true;
+            this.btnVenta.UseVisualStyleBackColor = false;
             // 
             // btnProducto
             // 
+            this.btnProducto.BackColor = System.Drawing.Color.AliceBlue;
             this.btnProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducto.Location = new System.Drawing.Point(14, 174);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(159, 35);
             this.btnProducto.TabIndex = 31;
             this.btnProducto.Text = "Producto";
-            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.UseVisualStyleBackColor = false;
             // 
             // btnCliente
             // 
+            this.btnCliente.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.Location = new System.Drawing.Point(14, 107);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(159, 35);
             this.btnCliente.TabIndex = 32;
             this.btnCliente.Text = "Cliente";
-            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.UseVisualStyleBackColor = false;
             // 
             // btnOrdenCompra
             // 
+            this.btnOrdenCompra.BackColor = System.Drawing.Color.AliceBlue;
             this.btnOrdenCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdenCompra.Location = new System.Drawing.Point(14, 379);
             this.btnOrdenCompra.Name = "btnOrdenCompra";
             this.btnOrdenCompra.Size = new System.Drawing.Size(159, 35);
             this.btnOrdenCompra.TabIndex = 33;
             this.btnOrdenCompra.Text = "Orden de Compra";
-            this.btnOrdenCompra.UseVisualStyleBackColor = true;
+            this.btnOrdenCompra.UseVisualStyleBackColor = false;
             this.btnOrdenCompra.Click += new System.EventHandler(this.btnOrdenCompra_Click);
             // 
-            // Form1
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(823, 447);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(125, 35);
+            this.btnEliminar.TabIndex = 34;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // RegistrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1207, 509);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnOrdenCompra);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnProducto);
@@ -276,8 +298,8 @@
             this.Controls.Add(this.txtDniRuc);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "RegistrarCliente";
+            this.Text = "Registrar Cliente";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
@@ -309,6 +331,7 @@
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnOrdenCompra;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 

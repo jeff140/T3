@@ -69,6 +69,9 @@ namespace CapaLogica
             if (string.IsNullOrWhiteSpace(cli.Nom_razonSocial))
                 throw new ArgumentException("El nombre/razón social es obligatorio.");
 
+            if (cli.Telefono.Length < 9)
+                throw new ArgumentException("El número de teléfono debe tener mínimo 9 caracteres.");
+
             if (cli.idDepartamento <= 0)
                 throw new ArgumentException("Debe seleccionar un departamento válido.");
 
@@ -81,7 +84,17 @@ namespace CapaLogica
                 throw new Exception("Error al editar cliente: " + ex.Message, ex);
             }
         }
-
+        public bool EliminarCliente(entCliente cli)
+        {
+            try
+            {
+                return datCliente.Instancia.EliminarCliente(cli);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar cliente: " + ex.Message, ex);
+            }
+        }
         #endregion
     }
 }
