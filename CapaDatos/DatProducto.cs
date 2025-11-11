@@ -12,25 +12,32 @@ namespace CapaDatos
     public class DatosProducto
     {
 
-        public List<EntidadProducto> ListarProductos()
+        public EntidadProducto ObtenerProductoPorId(int idProducto)
         {
-            List<EntidadProducto> lista = new List<EntidadProducto>();
+            EntidadProducto producto = null;
+
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Producto", cn);
+                SqlCommand cmd = new SqlCommand("SELECT idProducto, nombreProducto, precioUnitario FROM Producto WHERE idProducto = @idProducto", cn);
+                cmd.Parameters.AddWithValue("@idProducto", idProducto);
+
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+
+                if (dr.Read())
                 {
-                    lista.Add(new EntidadProducto
+                    producto = new EntidadProducto
                     {
-                        IdProducto = (int)dr["IdProducto"],
-                        NombreProducto = dr["NombreProducto"].ToString(),
-                        Precio = (decimal)dr["Precio"]
-                    });
+                        IdProducto = Convert.ToInt32(dr["idProducto"]),
+                        NombreProducto = dr["nombreProducto"].ToString(),
+                        Precio = Convert.ToDecimal(dr["precioUnitario"])
+                    };
                 }
             }
-            return lista;
+
+            return producto;
         }
+
+
     }
 }

@@ -12,8 +12,10 @@ namespace CapaEntidad
         public int IdVenta { get; set; }        // ID autoincrementable
         public string ProductoNombre { get; set; } // Nombre del producto (ejemplo simple)
         public int Cantidad { get; set; }
+        public decimal DescuentoTotal { get; set; }
+        public decimal Subtotal { get; set; }
         public decimal PrecioUnitario { get; set; }
-        public string TipoPago { get; set; }
+        public string MetodoPago { get; set; }
         public DateTime FechaVenta { get; set; }
         public decimal Total { get; set; } // Propiedad calculada o guardada
     }

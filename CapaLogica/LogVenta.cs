@@ -1,10 +1,12 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaEntidad;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaEntidad;
-using CapaDatos;
+using System.Windows.Forms;
 
 namespace CapaLogica
 {
@@ -31,6 +33,11 @@ namespace CapaLogica
                 throw new Exception("Error en la Capa Lógica al intentar eliminar la venta.", ex);
             }
         }
+        public DataTable MostrarVentas()
+        {
+            DatVenta datVenta = new DatVenta();
+            return datVenta.ListarVentas();
+        }
 
         // Método de Lógica para la Inserción
         public bool InsertarNuevaVenta(EntVenta venta)
@@ -49,13 +56,45 @@ namespace CapaLogica
             // 3. Llamada a la Capa de Datos
             try
             {
-                return objDatVenta.InsertarVenta(venta);
+                int idVenta = objDatVenta.InsertarVenta(venta); // retorna el idVenta (int)
+                return idVenta > 0; // lo convertimos en bool sin romper el resto del código
             }
             catch (Exception ex)
             {
-                // Aquí podrías loggear el error antes de propagarlo
+                throw new Exception("Error en la Capa Lógica al insertar la venta.", ex);
+            }
+
+        }
+        public bool RegistrarVenta(EntVenta venta, List<EntidadDetalleVenta> detalles)
+        {
+            try
+            {
+                DatVenta datVenta = new DatVenta();
+                int idVenta = datVenta.InsertarVenta(venta); // Inserta cabecera
+
+                foreach (var det in detalles)
+                {
+                    det.IdVenta = idVenta;                   // Asocia detalle con venta
+                    datVenta.InsertarDetalleVenta(det);     // Inserta detalle
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
                 throw new Exception("Error en la Capa Lógica al insertar la venta.", ex);
             }
         }
+        public decimal ObtenerDescuento(string descripcion)
+        {
+            DatVenta datos = new DatVenta();
+            return datos.ObtenerDescuentoDesdeBD(descripcion);
+        }
+        public DataTable ObtenerVentas()
+        {
+            DatVenta datVenta = new DatVenta();
+            return datVenta.ListarVentas();
+        }
     }
 }
+ 

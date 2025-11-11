@@ -10,6 +10,10 @@ namespace CapaEntidad
     {
         public int IdProducto { get; set; }
         public string NombreProducto { get; set; }
-        public decimal Precio { get; set; }
+        public decimal Precio { get; set; }   // <- importante
+        public string UnidadMedida { get; set; }
+        public int Stock { get; set; }
+        public int IdCategoria { get; set; }
     }
+
 }

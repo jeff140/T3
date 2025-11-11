@@ -14,9 +14,12 @@ namespace proyecto_T3
 {
     public partial class ventaProducto : Form
     {
+        private readonly LogVenta logica = new LogVenta();
+
         public ventaProducto()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             configurarcomboboxproducto();
             TipoMaderaOpciones();
             cboPagotipopago();
@@ -24,89 +27,122 @@ namespace proyecto_T3
         private void configurarcomboboxproducto()
         {
             cboProducto.Items.Clear();
-            cboProducto.Items.Add("selecciona producto");
             cboProducto.Items.Add("VIGA SUPER 8 m.t.");
-            cboProducto.Items.Add("MANDALLON 8 m.t.");
-            cboProducto.Items.Add("VIGA 7 m.t.");
-            cboProducto.Items.Add("MANDALLON 7 m.t.");
-            cboProducto.Items.Add("POSTE 3 m.t.");
+            cboProducto.Items.Add("Triplay 4mm");
             cboProducto.Items.Add("PARADOR NORMAL 2.5 m.t.");
-            cboProducto.Items.Add("LEÑA DE RAMAZON");
-            cboProducto.Items.Add("PELO");
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            // 1. Validación de campos obligatorios
-            if (cboProducto.SelectedIndex == -1 || string.IsNullOrWhiteSpace(txtCantidad.Text) ||
-                string.IsNullOrWhiteSpace(txtPrecio.Text) || cboPago.SelectedIndex == -1)
-            {
-                MessageBox.Show("Debe completar todos los campos de producto, cantidad, precio y tipo de pago.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             try
             {
-                // 2. Creación y llenado del objeto Entidad
-                // Reemplaza 'Venta' con el nombre de tu clase de entidad (e.g., VentaProducto, DetalleVenta)
-                CapaEntidad.EntVenta objVenta = new CapaEntidad.EntVenta();
+                // 1️⃣ Validar campos obligatorios
+                if (cboProducto.SelectedIndex == -1 ||
+                    string.IsNullOrWhiteSpace(txtCantidad.Text) ||
+                    string.IsNullOrWhiteSpace(txtPrecio.Text) ||
+                    cboPago.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debe completar los campos de producto, cantidad, precio y tipo de pago.",
+                                    "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-                objVenta.ProductoNombre = cboProducto.Text;
-                objVenta.Cantidad = int.Parse(txtCantidad.Text);
-                objVenta.PrecioUnitario =   decimal.Parse(txtPrecio.Text);
-                objVenta.TipoPago = cboPago.Text;
-                objVenta.FechaVenta = dtpFecha.Value.Date; // Obtiene solo la fecha
+                // 2️⃣ Validar que el producto tenga un ID válido
+                if (cboProducto.SelectedValue == null)
+                {
+                    MessageBox.Show("Debe seleccionar un producto válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                // Intenta convertir a numérico y lanza excepción si falla
-                objVenta.Cantidad = int.Parse(txtCantidad.Text);
-                objVenta.PrecioUnitario = decimal.Parse(txtPrecio.Text);
+                int idProducto = 0;
+                if (!int.TryParse(cboProducto.SelectedValue.ToString(), out idProducto))
+                {
+                    MessageBox.Show("El ID del producto no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                // 3. Llamada a la Capa de Lógica para Inserción
-                // Reemplaza 'LogicaNegocio' con el nombre de tu clase de lógica
-                CapaLogica.LogVenta logica = new CapaLogica.LogVenta();
-                bool exito = logica.InsertarNuevaVenta(objVenta);
+                // 3️⃣ Validar y convertir cantidad y precio
+                if (!int.TryParse(txtCantidad.Text, out int cantidad) ||
+                    !decimal.TryParse(txtPrecio.Text, out decimal precioUnitario))
+                {
+                    MessageBox.Show("Ingrese valores numéricos válidos para cantidad y precio.",
+                                    "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
+                // 4️⃣ Calcular descuento según precio o volumen
+                LogVenta logicaVenta = new LogVenta();
+                decimal descuento = 0;
+
+                if (precioUnitario >= 100)
+                {
+                    descuento = logicaVenta.ObtenerDescuento("Descuento por volumen");
+                    MessageBox.Show($"Se aplicó un descuento del {descuento}% al producto seleccionado.",
+                                    "Descuento aplicado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                // 5️⃣ Calcular subtotal, descuento y total
+                decimal subtotal = precioUnitario * cantidad;
+                decimal descuentoTotal = subtotal * (descuento / 100);
+                decimal total = subtotal - descuentoTotal;
+
+                // 6️⃣ Crear detalle de la venta
+                List<EntidadDetalleVenta> detalles = new List<EntidadDetalleVenta>
+        {
+            new EntidadDetalleVenta
+            {
+                IdProducto = idProducto,
+                Cantidad = cantidad,
+                PrecioUnitario = precioUnitario,
+                IdDescuento = (descuento > 0) ? 2 : (int?)null,
+                Total = total
+            }
+        };
+
+                // 7️⃣ Crear la cabecera de venta
+                EntVenta venta = new EntVenta
+                {
+                    Subtotal = subtotal,
+                    Cantidad = cantidad,
+                    DescuentoTotal = descuentoTotal,
+                    Total = total,
+                    MetodoPago = cboPago.Text,
+                    FechaVenta = dtpFecha.Value.Date
+                };
+
+                // 8️⃣ Registrar venta completa
+                bool exito = logicaVenta.RegistrarVenta(venta, detalles);
+
+                // 9️⃣ Mostrar resultado
                 if (exito)
                 {
-                    MessageBox.Show("Venta agregada y registrada en la base de datos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("✅ Venta registrada correctamente en la base de datos.",
+                                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Opcional: Actualizar el DataGridView (dgvVenta) y limpiar campos
-                    CargarDatosVenta(); // Asume que tienes un método para recargar el DGV
-                    LimpiarCamposIngreso();
+                    // Limpiar campos
+                    cboProducto.SelectedIndex = -1;
+                    txtCantidad.Clear();
+                    txtPrecio.Clear();
+                    cboPago.SelectedIndex = -1;
+
+                    // 🔄 Refrescar DataGridView (si tienes método para ello)
+                    CargarDatosVenta();
                 }
                 else
                 {
-                    MessageBox.Show("La operación falló al intentar guardar la venta.", "Error de BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo registrar la venta. Revise la conexión o los datos.",
+                                    "Error de BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (FormatException)
             {
-                MessageBox.Show("La cantidad y el precio deben ser valores numéricos válidos.", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los valores de cantidad y precio deben ser numéricos.",
+                                "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // Manejo de cualquier otra excepción (ej. error de conexión a BD)
-                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error inesperado: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -127,74 +163,90 @@ namespace proyecto_T3
             // Ejemplo: dgvVenta.DataSource = new CapaLogica.LogicaNegocio().ObtenerTodasLasVentas();
         }
 
-        private void dgvVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ConfigurarDataGridView()
         {
-            // 1. Validar que el clic fue en la columna de botones y no en el encabezado
-            // Reemplaza "btnEliminar" con el nombre exacto de la columna de tu botón.
-            if (dgvVenta.Columns[e.ColumnIndex].Name == "btnEliminar" && e.RowIndex >= 0)
+            if (dgvVenta.Columns.Count > 0)
             {
-                // 2. Preguntar confirmación antes de eliminar
-                DialogResult confirmacion = MessageBox.Show(
-                    "¿Está seguro que desea eliminar este registro de venta?",
-                    "Confirmar Eliminación",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning);
+                dgvVenta.Columns["idVenta"].HeaderText = "ID";
+                dgvVenta.Columns["fechaVenta"].HeaderText = "fecha";
+                dgvVenta.Columns["subtotal"].HeaderText = "sub total";
+                dgvVenta.Columns["Cantidad"].HeaderText = "cantidad";
+                dgvVenta.Columns["descuentoTotal"].HeaderText = "DescTotal";
+                dgvVenta.Columns["total"].HeaderText = "Total";
+                dgvVenta.Columns["metodoPago"].HeaderText = "MetodoPago";
 
-                if (confirmacion == DialogResult.Yes)
-                {
-                    try
-                    {
-                        // 3. Obtener el ID de la fila
-                        // Se asume que la columna 0 (o la que tú uses) contiene el ID de la venta (IdVenta)
-                        int idVenta = Convert.ToInt32(dgvVenta.Rows[e.RowIndex].Cells["IdVenta"].Value);
-
-                        // 4. Llamar a la Capa de Lógica para ejecutar la eliminación en BD
-                        CapaLogica.LogVenta logica = new CapaLogica.LogVenta();
-                        bool exito = logica.EliminarVenta(idVenta);
-
-                        if (exito)
-                        {
-                            MessageBox.Show("Venta eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            // Opcional: Refrescar el DataGridView para reflejar el cambio
-                            CargarDatosVenta();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se pudo eliminar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Ocurrió un error al procesar la eliminación: " + ex.Message, "Error Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                dgvVenta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvVenta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgvVenta.MultiSelect = false;
+                dgvVenta.ReadOnly = true;
             }
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void TipoMaderaOpciones()
         {
-            cboTipoMadera.Items.Clear();
-            cboTipoMadera.Items.Add("selecciona producto");
-            cboTipoMadera.Items.Add("pino/madera blanda");
-            cboTipoMadera.Items.Add("maderas estructurales");
-            cboTipoMadera.Items.Add("tableros");
-            cboTipoMadera.Items.Add("elementos varios(leña)");
+            cboCategoria.Items.Clear();
+            cboCategoria.Items.Add("selecciona producto");
+            cboCategoria.Items.Add("pino/madera blanda");
+            cboCategoria.Items.Add("maderas estructurales");
+            cboCategoria.Items.Add("tableros (MDF/Melamina)");
         }
         private void cboPagotipopago()
         {
             cboPago.Items.Clear();
-            cboPago.Items.Add("selecciona producto");
+            cboPago.Items.Add("selecciona metodo");
             cboPago.Items.Add("Efectivo");
             cboPago.Items.Add("Transferencia");
             cboPago.Items.Add("Tarjeta");
         }
 
-        private void cboPago_SelectedIndexChanged(object sender, EventArgs e)
+        private void FormVenta_Load(object sender, EventArgs e)
+        {
+            CapaLogica.LogicaProducto logicaProducto = new CapaLogica.LogicaProducto();
+            var lista = logicaProducto.ListarProductos();
+
+            cboProducto.DataSource = lista;
+            cboProducto.DisplayMember = "NombreProducto";
+            cboProducto.ValueMember = "IdProducto";
+            cboProducto.SelectedIndex = -1; // Nada seleccionado al inicio
+        }
+
+        private void cboProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboProducto.SelectedIndex != -1)
+            {
+                try
+                {
+                    int idProducto = Convert.ToInt32(cboProducto.SelectedValue);
+                    CapaLogica.LogicaProducto logica = new CapaLogica.LogicaProducto();
+                    var producto = logica.ObtenerProductoPorId(idProducto);
+
+                    if (producto != null)
+                        txtPrecio.Text = producto.Precio.ToString("F2");
+                    else
+                        txtPrecio.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar el precio: " + ex.Message);
+                }
+            }
+            else
+            {
+                txtPrecio.Clear();
+            }
+        }
+
+
+        private decimal ObtenerDescuentoDesdeBD(string nombreDescuento)
+        {
+            // Simulación: Retorna un descuento fijo del 10%
+            // En una aplicación real, aquí consultarías la base de datos.
+            if (nombreDescuento == "Descuento por precio")
+                return 10m;
+            return 0m;
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
 
         }
