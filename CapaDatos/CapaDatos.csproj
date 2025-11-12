@@ -49,6 +49,7 @@
     <Compile Include="datProducto.cs" />
     <Compile Include="datProveedor.cs" />
     <Compile Include="datCliente.cs" />
+    <Compile Include="datProforma.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
