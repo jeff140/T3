@@ -201,8 +201,8 @@ namespace proyecto_T3
 
         private void FormVenta_Load(object sender, EventArgs e)
         {
-            CapaLogica.LogicaProducto logicaProducto = new CapaLogica.LogicaProducto();
-            var lista = logicaProducto.ListarProductos();
+            CapaLogica.logProducto logicaProducto = new CapaLogica.logProducto();
+            var lista = logicaProducto.ListarProducto();
 
             cboProducto.DataSource = lista;
             cboProducto.DisplayMember = "NombreProducto";
@@ -217,11 +217,11 @@ namespace proyecto_T3
                 try
                 {
                     int idProducto = Convert.ToInt32(cboProducto.SelectedValue);
-                    CapaLogica.LogicaProducto logica = new CapaLogica.LogicaProducto();
+                    CapaLogica.logProducto logica = new CapaLogica.logProducto();
                     var producto = logica.ObtenerProductoPorId(idProducto);
 
                     if (producto != null)
-                        txtPrecio.Text = producto.Precio.ToString("F2");
+                        txtPrecio.Text = producto.precioUnitario.ToString("F2");
                     else
                         txtPrecio.Clear();
                 }

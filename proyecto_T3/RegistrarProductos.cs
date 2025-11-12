@@ -21,6 +21,7 @@ namespace proyecto_T3
             CargarCategorias();
             ConfigurarControles();
             DeshabilitarControles();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         private void ConfigurarControles()
         {
@@ -132,11 +133,11 @@ namespace proyecto_T3
                 prod.precioUnitario = decimal.Parse(txtPrecio.Text);
                 prod.stock = (int)txtStock.Value;
                 prod.estProducto = true;
-                prod.idCategoria = (int)cmbCategoria.SelectedValue;
+                prod.idCategoria= (int)cmbCategoria.SelectedValue;
 
                 if (esNuevo)
                 {
-                    logProducto.Instancia.InsertarProducto(prod);
+                    logProducto.Instancia.ListarProducto();
                     MessageBox.Show("Producto registrado exitosamente");
                 }
                 else

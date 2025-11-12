@@ -18,6 +18,7 @@ namespace proyecto_T3
         public Proforma()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Proforma_Load(object sender, EventArgs e)

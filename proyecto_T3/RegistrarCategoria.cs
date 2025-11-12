@@ -19,6 +19,7 @@ namespace proyecto_T3
             InitializeComponent();
             ListarCategorias();
             LimpiarCampos();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
 

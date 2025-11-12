@@ -19,6 +19,8 @@ namespace proyecto_T3
         public BuscarProductoSimple()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
 
         private void BuscarProductoSimple_Load(object sender, EventArgs e)

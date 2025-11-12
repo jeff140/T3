@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatProducto.cs" />
+    <Compile Include="datProducto.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="datCategoria.cs" />
     <Compile Include="datDetalleOrdenCompra.cs" />

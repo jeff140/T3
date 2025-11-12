@@ -47,7 +47,7 @@ namespace CapaDatos
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
                 string query = @"
-            SELECT 
+                SELECT 
                 V.idVenta AS [ID Venta],
                 V.fechaVenta AS [Fecha],
                 V.subtotal AS [Subtotal],
@@ -55,8 +55,8 @@ namespace CapaDatos
                 V.descuentoTotal AS [Descuento],
                 V.total AS [Total],
                 V.metodoPago AS [Método de Pago]
-            FROM Venta V
-            ORDER BY V.idVenta DESC;";
+                FROM Venta V
+                ORDER BY V.idVenta DESC;";
 
                 using (SqlCommand cmd = new SqlCommand(query, cn))
                 {
@@ -66,8 +66,6 @@ namespace CapaDatos
                     return dt;
                 }
             }
-
-            return tabla;
         }
         public int InsertarVenta(EntVenta venta)
         {

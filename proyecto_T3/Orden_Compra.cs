@@ -21,11 +21,11 @@ namespace proyecto_T3
             DeshabilitarControles();
             ConfigurarAutoCompletarProveedor();
             CargarSugerenciasProducto();
-
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
 
-            private void ConfigurarControles()
+        private void ConfigurarControles()
             {
                 txtid_orden.Enabled = false;
                 txttotal.Enabled = false;

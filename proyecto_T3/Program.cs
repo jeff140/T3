@@ -20,13 +20,7 @@ namespace CapaPresentacionT3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
             Application.Run(new Ingreso());
-=======
-
-            // 🔸 Aquí indicas qué formulario se abrirá primero
-            Application.Run(new ventaProducto());
->>>>>>> origin/venta
         }
     }
 }

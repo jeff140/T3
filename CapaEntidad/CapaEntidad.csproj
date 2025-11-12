@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="entCategoria.cs" />
     <Compile Include="entDetalleOrdenCompra.cs" />
     <Compile Include="entOrden_Compra.cs" />
