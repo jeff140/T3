@@ -1,13 +1,9 @@
-﻿using CapaEntidad;
-using CapaLogica;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +12,7 @@ namespace proyecto_T3
 {
     public partial class RegistrarCliente : Form
     {
+<<<<<<< HEAD:proyecto_T3/RegistrarCliente.cs
         private int idClienteSeleccionado = 0;
 
         public RegistrarCliente()
@@ -25,113 +22,42 @@ namespace proyecto_T3
             ConfigurarComboBoxDepartamento();
             this.StartPosition = FormStartPosition.CenterScreen;
 
+=======
+        public Form1()
+        {
+            InitializeComponent();
+>>>>>>> origin/venta:proyecto_T3/Form1.cs
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Configuraciones adicionales al cargar el formulario
-            ConfigurarDataGridView();
+
         }
 
-        #region Métodos de Configuración
-
-        /// <summary>
-        /// Configura el ComboBox de Departamentos
-        /// </summary>
-        private void ConfigurarComboBoxDepartamento()
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            cmbDepartamento.Items.Clear();
-            cmbDepartamento.Items.Add("Seleccione un departamento");
-            cmbDepartamento.Items.Add("1 - Lima");
-            cmbDepartamento.Items.Add("2 - Arequipa");
-            cmbDepartamento.Items.Add("3 - Cusco");
-            cmbDepartamento.Items.Add("4 - La Libertad");
-            cmbDepartamento.Items.Add("5 - Piura");
-            cmbDepartamento.Items.Add("6 - Lambayeque");
-            cmbDepartamento.Items.Add("7 - Junín");
-            cmbDepartamento.Items.Add("8 - Puno");
-            cmbDepartamento.Items.Add("9 - Cajamarca");
-            cmbDepartamento.Items.Add("10 - Ica");
-            cmbDepartamento.SelectedIndex = 0;
+
         }
 
-        /// <summary>
-        /// Configura la apariencia del DataGridView
-        /// </summary>
-        private void ConfigurarDataGridView()
+        private void label2_Click(object sender, EventArgs e)
         {
-            if (dgvCliente.Columns.Count > 0)
-            {
-                dgvCliente.Columns["idCliente"].HeaderText = "ID";
-                dgvCliente.Columns["DniRucCli"].HeaderText = "DNI/RUC";
-                dgvCliente.Columns["Nom_razonSocial"].HeaderText = "Nombre/Razón Social";
-                dgvCliente.Columns["fecRegCliente"].HeaderText = "Fecha Registro";
-                dgvCliente.Columns["idDepartamento"].HeaderText = "Departamento";
-                dgvCliente.Columns["Telefono"].HeaderText = "Teléfono";
 
-                // Opcional: Ocultar columna Estado si existe
-                if (dgvCliente.Columns.Contains("Estado"))
-                {
-                    dgvCliente.Columns["Estado"].Visible = false;
-                }
-
-                dgvCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvCliente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgvCliente.MultiSelect = false;
-                dgvCliente.ReadOnly = true;
-            }
         }
 
-        #endregion
-
-        #region Métodos Principales
-
-        /// <summary>
-        /// Lista todos los clientes en el DataGridView
-        /// </summary>
-        public void ListarCliente()
+        private void label1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                dgvCliente.DataSource = logCliente.Instancia.ListarCliente();
-                ConfigurarDataGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al listar clientes: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
         }
 
-        /// <summary>
-        /// Limpia todos los controles del formulario
-        /// </summary>
-        private void LimpiarVariables()
+        private void label3_Click(object sender, EventArgs e)
         {
-            txtDniRuc.Text = "";
-            txtNombre.Text = "";
-            txtTelefono.Text = "";
-            cmbDepartamento.SelectedIndex = 0;
-            dtpFechaRegistro.Value = DateTime.Now;
-            dtpFechaRegistro.Checked = false;
-            idClienteSeleccionado = 0;
-            txtDniRuc.Focus();
+
         }
 
-        /// <summary>
-        /// Valida que todos los campos requeridos estén completos
-        /// </summary>
-        private bool ValidarCampos()
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // Validar DNI/RUC
-            if (string.IsNullOrWhiteSpace(txtDniRuc.Text))
-            {
-                MessageBox.Show("El DNI/RUC es obligatorio.", "Validación",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtDniRuc.Focus();
-                return false;
-            }
 
+<<<<<<< HEAD:proyecto_T3/RegistrarCliente.cs
             if (txtDniRuc.Text.Trim().Length < 8)
             {
                 MessageBox.Show("El DNI/RUC debe tener al menos 8 caracteres.",
@@ -452,6 +378,8 @@ namespace proyecto_T3
         {
             Orden_Compra nuevoFormulario = new Orden_Compra();
             nuevoFormulario.Show();
+=======
+>>>>>>> origin/venta:proyecto_T3/Form1.cs
         }
 
         private void dgvCliente_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

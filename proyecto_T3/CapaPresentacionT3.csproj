@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +52,7 @@
     <Compile Include="Ingreso.Designer.cs">
       <DependentUpon>Ingreso.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Orden_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,15 +104,19 @@
   <ItemGroup>
     <EmbeddedResource Include="Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Orden_Compra.resx">
-      <DependentUpon>Orden_Compra.cs</DependentUpon>
+    <Compile Include="ventaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ventaProducto.Designer.cs">
+      <DependentUpon>ventaProducto.cs</DependentUpon>
+    </Compile>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="RegistrarCategoria.resx">
       <DependentUpon>RegistrarCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +133,15 @@
       <DependentUpon>BuscarProductoSimple.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+=======
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ventaProducto.resx">
+      <DependentUpon>ventaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> origin/venta
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
