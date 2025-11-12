@@ -1,0 +1,26 @@
+# Ignorar archivos y directorios de Visual Studio y C#
+[Bb]in/
+[Oo]bj/
+.vs/
+*.suo
+
+# Archivos de compilación
+bin/
+obj/
+.vs/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.suo
+
+# Archivos temporales
+*.user
+*.tmp
+*.log
+
+# Archivos de Visual Studio
+*.db
+*.dtbcache.json
+*.FileListAbsolute.txt
+
