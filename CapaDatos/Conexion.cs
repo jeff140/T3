@@ -20,8 +20,7 @@ namespace CapaDatos
         public SqlConnection Conectar()
         {
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Data Source=localhost; Initial Catalog = MADERERA_HUASCARAN;" +//"User ID=sa; Password=123";
-             "Integrated Security=true";
+            cn.ConnectionString = "Data Source=localhost\\SQLEXPRESS01;Initial Catalog=MADERERA_HUASCARAN;Integrated Security=true"; 
 
                 return cn;
         }

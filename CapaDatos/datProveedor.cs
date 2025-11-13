@@ -1,18 +1,15 @@
-﻿using CapaEntidad;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using CapaEntidad; 
 
 namespace CapaDatos
 {
     public class datProveedor
     {
         #region Singleton
+        // Patrón Singleton
         private static readonly datProveedor _instancia = new datProveedor();
         public static datProveedor Instancia
         {
@@ -20,29 +17,29 @@ namespace CapaDatos
         }
         #endregion Singleton
 
-        #region Métodos
+        #region Metodos
 
-        // ✅ Listar Proveedores
-        public List<entProveedor> ListarProveedor()
+        // --- MÉTODO PARA LISTAR ---
+        public List<entProveedor> ListarProveedores()
         {
             SqlCommand cmd = null;
             List<entProveedor> lista = new List<entProveedor>();
             try
             {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarProveedor", cn);
+                SqlConnection cn = Conexion.Instancia.Conectar(); 
+                cmd = new SqlCommand("sp_ListarProveedores", cn); 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
-
                 SqlDataReader dr = cmd.ExecuteReader();
+
                 while (dr.Read())
                 {
                     entProveedor prov = new entProveedor();
                     prov.idProveedor = Convert.ToInt32(dr["idProveedor"]);
-                    prov.razonSocial = Convert.ToString(dr["razonSocial"]);
-                    prov.ruc = Convert.ToString(dr["ruc"]);
-                    prov.telefono = Convert.ToString(dr["telefono"]);
-                    prov.direccion = Convert.ToString(dr["direccion"]);
+                    prov.razonSocial = dr["razonSocial"].ToString();
+                    prov.ruc = dr["ruc"].ToString();
+                    prov.telefono = dr["telefono"].ToString();
+                    prov.direccion = dr["direccion"].ToString();
                     prov.estProveedor = Convert.ToBoolean(dr["estProveedor"]);
                     lista.Add(prov);
                 }
@@ -53,33 +50,32 @@ namespace CapaDatos
             }
             finally
             {
-                if (cmd != null && cmd.Connection != null)
+                if (cmd != null && cmd.Connection.State == ConnectionState.Open)
+                {
                     cmd.Connection.Close();
+                }
             }
             return lista;
         }
 
-        // ✅ Insertar Proveedor
-        public bool InsertarProveedor(entProveedor prov)
+        // --- MÉTODO PARA INSERTAR ---
+        public void InsertarProveedor(entProveedor prov)
         {
             SqlCommand cmd = null;
-            bool inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarProveedor", cn);
+                cmd = new SqlCommand("sp_InsertarProveedor", cn); 
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                // Pasamos los parámetros
                 cmd.Parameters.AddWithValue("@razonSocial", prov.razonSocial);
                 cmd.Parameters.AddWithValue("@ruc", prov.ruc);
                 cmd.Parameters.AddWithValue("@telefono", prov.telefono);
                 cmd.Parameters.AddWithValue("@direccion", prov.direccion);
-                cmd.Parameters.AddWithValue("@estProveedor", prov.estProveedor);
 
                 cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                    inserta = true;
+                cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
@@ -87,34 +83,31 @@ namespace CapaDatos
             }
             finally
             {
-                if (cmd != null && cmd.Connection != null)
+                if (cmd != null && cmd.Connection.State == ConnectionState.Open)
+                {
                     cmd.Connection.Close();
+                }
             }
-            return inserta;
         }
 
-        // ✅ Editar Proveedor
-        public bool EditarProveedor(entProveedor prov)
+        // --- MÉTODO PARA ACTUALIZAR ---
+        public void ActualizarProveedor(entProveedor prov)
         {
             SqlCommand cmd = null;
-            bool edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarProveedor", cn);
+                cmd = new SqlCommand("sp_ActualizarProveedor", cn); // Llama al SP
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                // Pasamos los parámetros
                 cmd.Parameters.AddWithValue("@idProveedor", prov.idProveedor);
                 cmd.Parameters.AddWithValue("@razonSocial", prov.razonSocial);
-                cmd.Parameters.AddWithValue("@ruc", prov.ruc);
                 cmd.Parameters.AddWithValue("@telefono", prov.telefono);
                 cmd.Parameters.AddWithValue("@direccion", prov.direccion);
-                cmd.Parameters.AddWithValue("@estProveedor", prov.estProveedor);
 
                 cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                    edita = true;
+                cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
@@ -122,29 +115,28 @@ namespace CapaDatos
             }
             finally
             {
-                if (cmd != null && cmd.Connection != null)
+                if (cmd != null && cmd.Connection.State == ConnectionState.Open)
+                {
                     cmd.Connection.Close();
+                }
             }
-            return edita;
         }
 
-        // ✅ Deshabilitar Proveedor
-        public bool DeshabilitarProveedor(entProveedor prov)
+        // --- MÉTODO PARA ELIMINAR (LÓGICO) ---
+        public void EliminarProveedor(int idProveedor)
         {
             SqlCommand cmd = null;
-            bool desactiva = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarProveedor", cn);
+                cmd = new SqlCommand("sp_EliminarProveedor", cn); // Llama al SP
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@idProveedor", prov.idProveedor);
+                // Pasamos el ID del proveedor
+                cmd.Parameters.AddWithValue("@idProveedor", idProveedor);
 
                 cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                    desactiva = true;
+                cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
@@ -152,12 +144,13 @@ namespace CapaDatos
             }
             finally
             {
-                if (cmd != null && cmd.Connection != null)
+                if (cmd != null && cmd.Connection.State == ConnectionState.Open)
+                {
                     cmd.Connection.Close();
+                }
             }
-            return desactiva;
         }
 
-        #endregion Métodos
+        #endregion Metodos
     }
 }

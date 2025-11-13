@@ -1,52 +1,51 @@
-﻿using CapaDatos;
-using CapaEntidad;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CapaDatos;  
+using CapaEntidad; 
 
 namespace CapaLogica
 {
     public class logProveedor
-    { 
+    {
         #region Singleton
+        // Patrón Singleton
         private static readonly logProveedor _instancia = new logProveedor();
         public static logProveedor Instancia
         {
-            get
-            {
-                return logProveedor._instancia;
-            }
+            get { return logProveedor._instancia; }
         }
-#endregion Singleton
+        #endregion Singleton
 
-        #region Métodos
+        #region Metodos
 
-        // ✅ Listar Proveedores
-        public List<entProveedor> ListarProveedor()
+       
+        public List<entProveedor> ListarProveedores()
         {
-            return datProveedor.Instancia.ListarProveedor();
+            return datProveedor.Instancia.ListarProveedores();
         }
 
-        // ✅ Insertar Proveedor
+        
         public void InsertarProveedor(entProveedor prov)
         {
             datProveedor.Instancia.InsertarProveedor(prov);
         }
 
-        // ✅ Editar Proveedor
-        public void EditarProveedor(entProveedor prov)
+        /// <summary>
+        /// Llama a CapaDatos para actualizar proveedor
+        /// </summary>
+        public void ActualizarProveedor(entProveedor prov)
         {
-            datProveedor.Instancia.EditarProveedor(prov);
+            datProveedor.Instancia.ActualizarProveedor(prov);
         }
 
-        // ✅ Deshabilitar Proveedor
-        public void DeshabilitarProveedor(entProveedor prov)
+        /// <summary>
+        /// Llama a CapaDatos para eliminar (deshabilitar) proveedor
+        /// </summary>
+        public void EliminarProveedor(int idProveedor)
         {
-            datProveedor.Instancia.DeshabilitarProveedor(prov);
+            datProveedor.Instancia.EliminarProveedor(idProveedor);
         }
 
-        #endregion Métodos
+        #endregion Metodos
     }
 }

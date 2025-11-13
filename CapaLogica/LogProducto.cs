@@ -2,44 +2,56 @@
 using CapaEntidad;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CapaLogica
 {
-    public class LogicaProducto
+    public class logProducto
     {
-        private DatosProducto datos = new DatosProducto();
+        private datProducto datos = new datProducto();
 
-        public EntidadProducto ObtenerProductoPorId(int idProducto)
+        public entProducto ObtenerProductoPorId(int idProducto)
         {
-            DatosProducto datProducto = new DatosProducto();
+            datProducto datProducto = new datProducto();
             return datProducto.ObtenerProductoPorId(idProducto);
         }
-    public List<EntidadProducto> ListarProductos()
+        #region singleton
+        private static readonly logProducto _instancia = new logProducto();
+        public static logProducto Instancia
         {
-            List<EntidadProducto> lista = new List<EntidadProducto>();
-
-            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            get
             {
-                SqlCommand cmd = new SqlCommand("SELECT idProducto, nombreProducto, precioUnitario FROM Producto", cn);
-                cn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    lista.Add(new EntidadProducto
-                    {
-                        IdProducto = Convert.ToInt32(dr["idProducto"]),
-                        NombreProducto = dr["nombreProducto"].ToString(),
-                        Precio = Convert.ToDecimal(dr["precioUnitario"])
-                    });
-                }
-            }
-
-            return lista;
+                return logProducto._instancia;
             }
         }
+        #endregion singleton
+
+        #region metodos
+        // Listado
+        public List<entProducto> ListarProducto()
+        {
+            return datProducto.Instancia.ListarProducto();
+        }
+
+        // Inserta
+        public void InsertarProducto(entProducto prod)
+        {
+            datProducto.Instancia.InsertarProducto(prod);
+        }
+
+        // Edita
+        public void EditarProducto(entProducto prod)
+        {
+            datProducto.Instancia.EditarProducto(prod);
+        }
+
+        // Deshabilita
+        public void DeshabilitarProducto(entProducto prod)
+        {
+            datProducto.Instancia.DeshabilitarProducto(prod);
+        }
+        #endregion metodos
     }
+}

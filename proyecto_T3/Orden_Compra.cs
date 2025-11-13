@@ -241,7 +241,7 @@ namespace proyecto_T3
                 if (string.IsNullOrEmpty(txtproveedor.Text))
                     return;
 
-                var proveedores = logProveedor.Instancia.ListarProveedor();
+                var proveedores = logProveedor.Instancia.ListarProveedores();
                 var proveedor = proveedores.FirstOrDefault(p =>
                     p.razonSocial.ToLower().Contains(txtproveedor.Text.ToLower()) ||
                     p.idProveedor.ToString() == txtproveedor.Text);
@@ -513,7 +513,7 @@ namespace proyecto_T3
         {
             try
             {
-                var proveedores = logProveedor.Instancia.ListarProveedor();
+                var proveedores = logProveedor.Instancia.ListarProveedores();
                 AutoCompleteStringCollection listaProveedores = new AutoCompleteStringCollection();
 
                 // Agrega la razón social de cada proveedor a la lista
