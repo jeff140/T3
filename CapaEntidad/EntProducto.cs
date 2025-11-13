@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class EntidadProducto
+    public class entProducto
     {
-        public int IdProducto { get; set; }
-        public string NombreProducto { get; set; }
-        public decimal Precio { get; set; }   // <- importante
-        public string UnidadMedida { get; set; }
-        public int Stock { get; set; }
-        public int IdCategoria { get; set; }
-    }
+        public int idProducto { get; set; }
+        public string nombreProducto { get; set; }
+        public string unidadMedida { get; set; }
+        public decimal precioUnitario { get; set; }
+        public int stock { get; set; }
+        public Boolean estProducto { get; set; }
+        public int idCategoria { get; set; }
 
+        // Propiedad adicional para mostrar el nombre de la categoría
+        public string nombreCategoria { get; set; }
+    }
 }
