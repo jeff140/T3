@@ -29,7 +29,7 @@ namespace CapaDatos
                 try
                 {
                     SqlConnection cn = Conexion.Instancia.Conectar();
-                    cmd = new SqlCommand("spListarOrdenCompra", cn);
+                    cmd = new SqlCommand("sp_ListarOrdenesCompra", cn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cn.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -63,7 +63,7 @@ namespace CapaDatos
                 try
                 {
                     SqlConnection cn = Conexion.Instancia.Conectar();
-                    cmd = new SqlCommand("spInsertarOrdenCompra", cn);
+                    cmd = new SqlCommand("sp_InsertarOrdenCompra", cn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@fechaEmision", oc.fechaEmision);
                     cmd.Parameters.AddWithValue("@idProveedor", oc.idProveedor);
@@ -88,7 +88,7 @@ namespace CapaDatos
                 try
                 {
                     SqlConnection cn = Conexion.Instancia.Conectar();
-                    cmd = new SqlCommand("spEditarOrdenCompra", cn);
+                    cmd = new SqlCommand("sp_ActualizarOrdenCompra", cn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@idOrdenCompra", oc.idOrdenCompra);
                     cmd.Parameters.AddWithValue("@fechaEmision", oc.fechaEmision);
@@ -118,7 +118,7 @@ namespace CapaDatos
                 try
                 {
                     SqlConnection cn = Conexion.Instancia.Conectar();
-                    cmd = new SqlCommand("spDeshabilitarOrdenCompra", cn);
+                    cmd = new SqlCommand("sp_EliminarOrdenCompra", cn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@idOrdenCompra", oc.idOrdenCompra);
                     cn.Open();

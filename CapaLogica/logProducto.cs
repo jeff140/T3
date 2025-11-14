@@ -14,8 +14,7 @@ namespace CapaLogica
 
         public entProducto ObtenerProductoPorId(int idProducto)
         {
-            datProducto datProducto = new datProducto();
-            return datProducto.ObtenerProductoPorId(idProducto);
+            return datos.ObtenerProductoPorId(idProducto);
         }
         #region singleton
         private static readonly logProducto _instancia = new logProducto();

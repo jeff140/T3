@@ -551,7 +551,6 @@ namespace proyecto_T3
 
         private void btnProveedor_Click(object sender, EventArgs e)
         {
-            // 1. Crea una instancia de tu nuevo formulario
             FormProveedor formularioProveedor = new FormProveedor();
 
             formularioProveedor.Show();

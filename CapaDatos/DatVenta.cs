@@ -11,35 +11,6 @@ namespace CapaDatos
 {
     public class DatVenta
     {
-        public bool EliminarVenta(int idVenta)
-        {
-            using (SqlConnection cn = Conexion.Instancia.Conectar())
-            {
-                // Asumimos que tienes un Stored Procedure llamado SP_EliminarVenta
-                SqlCommand cmd = new SqlCommand("SP_EliminarVenta", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                // Parámetro para identificar la fila a eliminar
-                cmd.Parameters.AddWithValue("@IdVenta", idVenta);
-
-                try
-                {
-                    cn.Open();
-                    // ExecuteNonQuery devuelve 1 si se eliminó una fila, o 0 si no se encontró
-                    int filasAfectadas = cmd.ExecuteNonQuery();
-                    return filasAfectadas > 0;
-                }
-                catch (SqlException ex)
-                {
-                    // Lanza una excepción si hay un error de base de datos
-                    throw new Exception("Error al ejecutar la eliminación en la BD: " + ex.Message, ex);
-                }
-                finally
-                {
-                    cn.Close();
-                }
-            }
-        }
         public DataTable ListarVentas()
         {
             DataTable tabla = new DataTable();

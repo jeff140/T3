@@ -54,7 +54,7 @@ namespace proyecto_T3
                 dgvProductos.Columns["nombreProducto"].HeaderText = "Producto";
                 dgvProductos.Columns["precioUnitario"].HeaderText = "Precio";
                 dgvProductos.Columns["stock"].HeaderText = "Stock";
-                dgvProductos.Columns["nombreCategoria"].HeaderText = "Categoría";
+                //dgvProductos.Columns["nombreCategoria"].HeaderText = "Categoría";
                 dgvProductos.Columns["idCategoria"].Visible = false;
                 dgvProductos.Columns["estProducto"].Visible = false;
             }
@@ -247,8 +247,8 @@ namespace proyecto_T3
                 {
                     var listaProductos = logProducto.Instancia.ListarProducto();
                     var productosFiltrados = listaProductos.Where(p =>
-                        p.nombreProducto.ToLower().Contains(txtBuscar.Text.ToLower()) ||
-                        p.nombreCategoria.ToLower().Contains(txtBuscar.Text.ToLower())
+                        p.nombreProducto.ToLower().Contains(txtBuscar.Text.ToLower())
+                    //|| p.nombreCategoria.ToLower().Contains(txtBuscar.Text.ToLower())
                     ).ToList();
 
                     dgvProductos.DataSource = productosFiltrados;

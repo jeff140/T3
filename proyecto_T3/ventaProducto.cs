@@ -20,17 +20,10 @@ namespace proyecto_T3
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            configurarcomboboxproducto();
             TipoMaderaOpciones();
             cboPagotipopago();
         }
-        private void configurarcomboboxproducto()
-        {
-            cboProducto.Items.Clear();
-            cboProducto.Items.Add("VIGA SUPER 8 m.t.");
-            cboProducto.Items.Add("Triplay 4mm");
-            cboProducto.Items.Add("PARADOR NORMAL 2.5 m.t.");
-        }
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -201,33 +194,42 @@ namespace proyecto_T3
 
         private void FormVenta_Load(object sender, EventArgs e)
         {
-            CapaLogica.logProducto logicaProducto = new CapaLogica.logProducto();
-            var lista = logicaProducto.ListarProducto();
+            cboProducto.SelectedIndexChanged -= cboProducto_SelectedIndexChanged;
 
-            cboProducto.DataSource = lista;
-            cboProducto.DisplayMember = "NombreProducto";
-            cboProducto.ValueMember = "IdProducto";
-            cboProducto.SelectedIndex = -1; // Nada seleccionado al inicio
+            try
+            {
+                logProducto logicaProducto = new logProducto();
+                var lista = logicaProducto.ListarProducto();
+
+                cboProducto.DataSource = lista;
+                cboProducto.DisplayMember = "nombreProducto";
+                cboProducto.ValueMember = "idProducto";
+
+                cboProducto.SelectedIndex = -1;
+            }
+            finally
+            {
+                cboProducto.SelectedIndexChanged += cboProducto_SelectedIndexChanged;
+            }
         }
 
         private void cboProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboProducto.SelectedIndex != -1)
+            if (cboProducto.SelectedValue != null && cboProducto.SelectedIndex != -1)
             {
                 try
                 {
                     int idProducto = Convert.ToInt32(cboProducto.SelectedValue);
-                    CapaLogica.logProducto logica = new CapaLogica.logProducto();
+                    logProducto logica = new logProducto();
                     var producto = logica.ObtenerProductoPorId(idProducto);
 
-                    if (producto != null)
-                        txtPrecio.Text = producto.precioUnitario.ToString("F2");
-                    else
-                        txtPrecio.Clear();
+                    txtPrecio.Text = producto?.precioUnitario.ToString("F2") ?? "";
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al cargar el precio: " + ex.Message);
+                    // Manejo de errores más específico
+                    MessageBox.Show("Error al cargar el precio (Consulte el log de errores): " + ex.Message, "Error de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtPrecio.Clear(); // Limpiar en caso de error
                 }
             }
             else
@@ -244,11 +246,6 @@ namespace proyecto_T3
             if (nombreDescuento == "Descuento por precio")
                 return 10m;
             return 0m;
-        }
-
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

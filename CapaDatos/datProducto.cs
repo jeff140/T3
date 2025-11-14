@@ -29,7 +29,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarProducto", cn);
+                cmd = new SqlCommand("sp_ListarProductos", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -43,7 +43,7 @@ namespace CapaDatos
                     prod.stock = Convert.ToInt32(dr["stock"]);
                     prod.estProducto = Convert.ToBoolean(dr["estProducto"]);
                     prod.idCategoria = Convert.ToInt32(dr["idCategoria"]);
-                    prod.nombreCategoria = Convert.ToString(dr["nombreCategoria"]);
+                    //prod.nombreCategoria = Convert.ToString(dr["nombreCategoria"]);
                     lista.Add(prod);
                 }
             }
@@ -66,7 +66,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarProducto", cn);
+                cmd = new SqlCommand("sp_InsertarProducto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nombreProducto", prod.nombreProducto);
                 cmd.Parameters.AddWithValue("@unidadMedida", prod.unidadMedida);
@@ -97,7 +97,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarProducto", cn);
+                cmd = new SqlCommand("sp_ActualizarProducto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idProducto", prod.idProducto);
                 cmd.Parameters.AddWithValue("@nombreProducto", prod.nombreProducto);
@@ -105,7 +105,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@precioUnitario", prod.precioUnitario);
                 cmd.Parameters.AddWithValue("@stock", prod.stock);
                 cmd.Parameters.AddWithValue("@estProducto", prod.estProducto);
-                cmd.Parameters.AddWithValue("@idCategoria", prod.idCategoria);
+                //cmd.Parameters.AddWithValue("@idCategoria", prod.idCategoria);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -129,7 +129,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarProducto", cn);
+                cmd = new SqlCommand("sp_EliminarProducto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idProducto", prod.idProducto);
                 cn.Open();

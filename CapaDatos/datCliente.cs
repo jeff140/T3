@@ -63,7 +63,7 @@ namespace CapaDatos
             bool inserta = false;
 
             using (SqlConnection cn = Conexion.Instancia.Conectar())
-            using (SqlCommand cmd = new SqlCommand("spInsertarCliente", cn))
+            using (SqlCommand cmd = new SqlCommand("sp_InsertarCliente", cn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandTimeout = 60;
@@ -88,7 +88,7 @@ namespace CapaDatos
             bool edita = false;
 
             using (SqlConnection cn = Conexion.Instancia.Conectar())
-            using (SqlCommand cmd = new SqlCommand("spEditarCliente", cn))
+            using (SqlCommand cmd = new SqlCommand("sp_ActualizarCliente", cn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -112,7 +112,7 @@ namespace CapaDatos
             bool eliminar = false;
 
             using (SqlConnection cn = Conexion.Instancia.Conectar())
-            using (SqlCommand cmd = new SqlCommand("spEliminarCliente", cn))
+            using (SqlCommand cmd = new SqlCommand("sp_EliminarCliente", cn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 

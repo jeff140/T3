@@ -28,7 +28,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarDetalleOrdenCompra", cn);
+                cmd = new SqlCommand("sp_ListarDetallesOrdenCompra", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idOrdenCompra", idOrdenCompra);
                 cn.Open();
@@ -64,7 +64,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarDetalleOrdenCompra", cn);
+                cmd = new SqlCommand("sp_InsertarDetalleOrdenCompra", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idOrdenCompra", det.idOrdenCompra);
                 cmd.Parameters.AddWithValue("@idProducto", det.idProducto);

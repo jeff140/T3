@@ -14,25 +14,6 @@ namespace CapaLogica
     {
         // Instancia para acceder a la capa de datos
         private DatVenta objDatVenta = new DatVenta();
-        public bool EliminarVenta(int idVenta)
-        {
-            try
-            {
-                // Validación básica: Asegurarse de que el ID es válido
-                if (idVenta <= 0)
-                {
-                    throw new ArgumentException("ID de venta inválido para eliminar.");
-                }
-
-                // Llamada a la Capa de Datos
-                return objDatVenta.EliminarVenta(idVenta);
-            }
-            catch (Exception ex)
-            {
-                // Aquí podrías loggear el error
-                throw new Exception("Error en la Capa Lógica al intentar eliminar la venta.", ex);
-            }
-        }
         public DataTable MostrarVentas()
         {
             DatVenta datVenta = new DatVenta();
