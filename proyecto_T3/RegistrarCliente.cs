@@ -540,7 +540,7 @@ namespace proyecto_T3
         }
         private void btnOrdenCompra_Click(object sender, EventArgs e)
         {
-            Orden_Compra nuevoFormulario = new Orden_Compra();
+            Guia_Remision nuevoFormulario = new Guia_Remision();
             nuevoFormulario.Show();
         }
         private void btnProducto_Click(object sender, EventArgs e)
