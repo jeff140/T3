@@ -43,44 +43,48 @@
             // 
             // dtgCategoria
             // 
+            this.dtgCategoria.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgCategoria.Location = new System.Drawing.Point(11, 254);
+            this.dtgCategoria.Location = new System.Drawing.Point(25, 232);
             this.dtgCategoria.Name = "dtgCategoria";
-            this.dtgCategoria.Size = new System.Drawing.Size(690, 252);
+            this.dtgCategoria.Size = new System.Drawing.Size(398, 272);
             this.dtgCategoria.TabIndex = 19;
             this.dtgCategoria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCategoria_CellClick);
             // 
             // btndeshabilitar
             // 
+            this.btndeshabilitar.BackColor = System.Drawing.Color.SlateGray;
             this.btndeshabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndeshabilitar.Location = new System.Drawing.Point(362, 158);
+            this.btndeshabilitar.Location = new System.Drawing.Point(313, 161);
             this.btndeshabilitar.Name = "btndeshabilitar";
             this.btndeshabilitar.Size = new System.Drawing.Size(110, 47);
             this.btndeshabilitar.TabIndex = 18;
             this.btndeshabilitar.Text = "Deshabilitar ";
-            this.btndeshabilitar.UseVisualStyleBackColor = true;
+            this.btndeshabilitar.UseVisualStyleBackColor = false;
             this.btndeshabilitar.Click += new System.EventHandler(this.btndeshabilitar_Click);
             // 
             // btneditar
             // 
+            this.btneditar.BackColor = System.Drawing.Color.LightSlateGray;
             this.btneditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.Location = new System.Drawing.Point(362, 78);
+            this.btneditar.Location = new System.Drawing.Point(313, 91);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(110, 50);
             this.btneditar.TabIndex = 17;
             this.btneditar.Text = "Editar ";
-            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnregistrar
             // 
+            this.btnregistrar.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregistrar.Location = new System.Drawing.Point(362, 9);
+            this.btnregistrar.Location = new System.Drawing.Point(313, 21);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Size = new System.Drawing.Size(110, 48);
             this.btnregistrar.TabIndex = 16;
             this.btnregistrar.Text = "Registrar ";
-            this.btnregistrar.UseVisualStyleBackColor = true;
+            this.btnregistrar.UseVisualStyleBackColor = false;
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
             // checkEstado
@@ -142,7 +146,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 526);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(480, 526);
             this.Controls.Add(this.dtgCategoria);
             this.Controls.Add(this.btndeshabilitar);
             this.Controls.Add(this.btneditar);
