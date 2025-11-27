@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNumeroProforma = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +49,8 @@
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.txtClienteNombre = new System.Windows.Forms.TextBox();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,14 +62,6 @@
             this.label1.Size = new System.Drawing.Size(62, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cliente:";
-            // 
-            // cmbCliente
-            // 
-            this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(81, 22);
-            this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(121, 28);
-            this.cmbCliente.TabIndex = 1;
             // 
             // label2
             // 
@@ -261,11 +254,31 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // txtClienteNombre
+            // 
+            this.txtClienteNombre.Location = new System.Drawing.Point(191, 25);
+            this.txtClienteNombre.Name = "txtClienteNombre";
+            this.txtClienteNombre.ReadOnly = true;
+            this.txtClienteNombre.Size = new System.Drawing.Size(257, 26);
+            this.txtClienteNombre.TabIndex = 22;
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Location = new System.Drawing.Point(81, 16);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(98, 39);
+            this.btnBuscarCliente.TabIndex = 23;
+            this.btnBuscarCliente.Text = "Buscar";
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            // 
             // Proforma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 511);
+            this.Controls.Add(this.btnBuscarCliente);
+            this.Controls.Add(this.txtClienteNombre);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescuento);
@@ -286,7 +299,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNumeroProforma);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.label1);
             this.Name = "Proforma";
             this.Text = "Proforma";
@@ -300,7 +312,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNumeroProforma;
         private System.Windows.Forms.Label label3;
@@ -321,5 +332,7 @@
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.TextBox txtClienteNombre;
+        private System.Windows.Forms.Button btnBuscarCliente;
     }
 }
