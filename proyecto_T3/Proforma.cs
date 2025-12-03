@@ -15,6 +15,9 @@ namespace proyecto_T3
     public partial class Proforma : Form
     {
         private List<entProformaItem> detalleItems;
+
+        private int _idClienteSeleccionado = 0;
+
         public Proforma()
         {
             InitializeComponent();
@@ -23,27 +26,8 @@ namespace proyecto_T3
 
         private void Proforma_Load(object sender, EventArgs e)
         {
-            CargarClientes();
             ConfigurarGrilla();
             InicializarFormulario();
-        }
-
-        private void CargarClientes()
-        {
-            try
-            {
-                // --- CORRECCIÓN APLICADA ---
-                // Usamos el Singleton de la capa LÓGICA
-                List<entCliente> listaClientes = logCliente.Instancia.ListarCliente();
-
-                cmbCliente.DataSource = listaClientes;
-                cmbCliente.DisplayMember = "Nom_razonSocial"; // Propiedad de EntCliente
-                cmbCliente.ValueMember = "idCliente";       // Propiedad de EntCliente
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar clientes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void ConfigurarGrilla()
@@ -51,7 +35,7 @@ namespace proyecto_T3
             dgvItems.AutoGenerateColumns = false;
             dgvItems.Columns.Clear();
 
-            // Columna Producto (usa la propiedad 'NombreProducto' de EntProformaItem)
+            // Columna Producto
             dgvItems.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "NombreProducto",
@@ -60,7 +44,7 @@ namespace proyecto_T3
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
-            // Columna Cantidad (usa la propiedad 'Cantidad' de EntProformaItem)
+            // Columna Cantidad
             dgvItems.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "Cantidad",
@@ -69,23 +53,23 @@ namespace proyecto_T3
                 Width = 60
             });
 
-            // Columna Precio (usa la propiedad 'PrecioUnitario' de EntProformaItem)
+            // Columna Precio
             dgvItems.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "PrecioUnitario",
                 HeaderText = "Precio Unit.",
                 DataPropertyName = "PrecioUnitario",
-                DefaultCellStyle = new DataGridViewCellStyle { Format = "C2" }, // Moneda
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "C2" },
                 Width = 100
             });
 
-            // Columna Subtotal (usa la propiedad 'Subtotal' de EntProformaItem)
+            // Columna Subtotal
             dgvItems.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "Subtotal",
                 HeaderText = "Subtotal",
                 DataPropertyName = "Subtotal",
-                DefaultCellStyle = new DataGridViewCellStyle { Format = "C2" }, // Moneda
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "C2" },
                 Width = 100
             });
         }
@@ -95,7 +79,11 @@ namespace proyecto_T3
             detalleItems = new List<entProformaItem>();
 
             txtNumeroProforma.Text = "[Autogenerado]";
-            cmbCliente.SelectedIndex = -1;
+
+            // --- NUEVO: Limpiamos la selección de cliente ---
+            _idClienteSeleccionado = 0;
+            txtClienteNombre.Text = ""; // Limpiamos la caja de texto
+
             dtpFechaEmision.Value = DateTime.Now;
             dtpFechaVencimiento.Value = DateTime.Now.AddDays(15);
             txtComentarios.Clear();
@@ -123,8 +111,7 @@ namespace proyecto_T3
             // Validamos que el texto sea un número
             if (!decimal.TryParse(txtDescuento.Text, out descuentoPorcentaje) && !string.IsNullOrEmpty(txtDescuento.Text))
             {
-                // Si el usuario escribe "abc", lo ignoramos temporalmente
-                // Opcional: podrías mostrar un error
+                // Ignoramos si no es número
             }
 
             decimal total = Math.Round(subtotal - (subtotal * (descuentoPorcentaje / 100m)), 2);
@@ -140,26 +127,41 @@ namespace proyecto_T3
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
-            // 1. Crea una instancia del formulario buscador
             using (BuscarProductoSimple frmBuscar = new BuscarProductoSimple())
             {
-                // 2. Muestra el formulario como un diálogo modal
-                //    (El código se detiene aquí hasta que 'frmBuscar' se cierre)
-                DialogResult resultado = frmBuscar.ShowDialog();
+                // 1. Pasamos la lista para que el buscador sepa qué stock restar visualmente
+                frmBuscar.ItemsEnProformaActual = detalleItems;
 
-                // 3. Verifica si el usuario presionó "Seleccionar" (OK)
-                if (resultado == DialogResult.OK)
+                if (frmBuscar.ShowDialog() == DialogResult.OK)
                 {
-                    // 4. Obtiene el item que 'frmBuscar' preparó
                     entProformaItem nuevoItem = frmBuscar.ItemSeleccionado;
 
-                    // 5. Calcula el Subtotal del item (aquí en el formulario principal)
-                    nuevoItem.Subtotal = Math.Round(nuevoItem.Cantidad * nuevoItem.PrecioUnitario, 2);
+                    // --- AQUÍ ESTÁ LA SOLUCIÓN ---
 
-                    // 6. Añade el item a nuestra lista en memoria
-                    detalleItems.Add(nuevoItem);
+                    // 2. Buscamos si el producto ya existe en nuestra lista 'detalleItems'
+                    // Usamos una expresión Lambda para buscar por ID
+                    var itemExistente = detalleItems.FirstOrDefault(x => x.IdProducto == nuevoItem.IdProducto);
 
-                    // 7. Refresca la grilla y los totales (usando los métodos que ya creamos)
+                    if (itemExistente != null)
+                    {
+                        // CASO A: EL PRODUCTO YA EXISTE
+                        // En lugar de agregar uno nuevo, sumamos la cantidad al existente
+                        itemExistente.Cantidad += nuevoItem.Cantidad;
+
+                        // Recalculamos el subtotal de esa fila (Precio * Nueva Cantidad)
+                        itemExistente.Subtotal = Math.Round(itemExistente.Cantidad * itemExistente.PrecioUnitario, 2);
+                    }
+                    else
+                    {
+                        // CASO B: ES NUEVO
+                        // Calculamos su subtotal inicial
+                        nuevoItem.Subtotal = Math.Round(nuevoItem.Cantidad * nuevoItem.PrecioUnitario, 2);
+
+                        // Lo agregamos a la lista
+                        detalleItems.Add(nuevoItem);
+                    }
+
+                    // 3. Refrescamos la pantalla
                     ActualizarGrilla();
                     CalcularTotales();
                 }
@@ -168,21 +170,15 @@ namespace proyecto_T3
 
         private void btnQuitarProducto_Click(object sender, EventArgs e)
         {
-            // 1. Validar que haya una fila seleccionada en la grilla
             if (dgvItems.CurrentRow == null)
             {
                 MessageBox.Show("Debe seleccionar un ítem de la grilla para quitarlo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // 2. Obtener el objeto EntProformaItem de la fila seleccionada
-            // (Esta es la forma más segura de obtener el objeto)
             entProformaItem itemParaQuitar = (entProformaItem)dgvItems.CurrentRow.DataBoundItem;
-
-            // 3. Quitar el item de nuestra lista en memoria
             detalleItems.Remove(itemParaQuitar);
 
-            // 4. Refrescar la grilla y los totales (reutilizando nuestros métodos)
             ActualizarGrilla();
             CalcularTotales();
         }
@@ -194,77 +190,79 @@ namespace proyecto_T3
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // --- 1. VALIDACIONES DE UI (Rápidas) ---
-            if (cmbCliente.SelectedValue == null)
+            // --- 1. VALIDACIONES MODIFICADAS ---
+
+            // Validamos la variable _idClienteSeleccionado en lugar del Combo
+            if (_idClienteSeleccionado == 0)
             {
-                MessageBox.Show("Debe seleccionar un cliente.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cmbCliente.Focus();
-                return; // Detiene la ejecución
+                MessageBox.Show("Debe buscar y seleccionar un cliente.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                btnBuscarCliente.Focus();
+                return;
             }
 
             if (detalleItems.Count == 0)
             {
                 MessageBox.Show("Debe agregar al menos un producto a la proforma.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 btnAgregarProducto.Focus();
-                return; // Detiene la ejecución
+                return;
             }
 
             // --- 2. CREAR EL OBJETO A ENVIAR ---
             entProforma proforma = new entProforma();
 
-            // --- 3. POBLAR LA CABECERA ---
-            proforma.IdCliente = (int)cmbCliente.SelectedValue; // (int)
+            // Usamos el ID de la variable
+            proforma.IdCliente = _idClienteSeleccionado;
+
             proforma.FechaEmision = dtpFechaEmision.Value.Date;
             proforma.FechaVencimiento = dtpFechaVencimiento.Value.Date;
             proforma.Comentarios = txtComentarios.Text.Trim();
 
-            // Asumiendo que tienes un ID de usuario guardado globalmente
-            // proforma.IdUsuario = SesionActual.IdUsuario; // (Ejemplo)
-
-            // Lee el descuento
             decimal descuento = 0;
             decimal.TryParse(txtDescuento.Text, out descuento);
             proforma.Descuento = descuento;
 
-
-            // --- 4. POBLAR EL DETALLE ---
-            // (Tu logProforma espera la lista de items)
             proforma.Items = detalleItems;
-
-            // NOTA: No calculamos el Subtotal aquí.
-            // Tu capa 'logProforma' es la responsable de hacer ese cálculo
-            // antes de pasarlo a 'datProforma'.
 
             // --- 5. LLAMAR A LA CAPA LÓGICA ---
             try
             {
                 string numeroProformaGenerado;
 
-                // Llamamos al Singleton de la lógica
                 int idProformaGenerada = logProforma.Instancia.InsertarProforma(proforma, out numeroProformaGenerado);
 
-                // --- 6. MANEJAR RESPUESTA ---
                 if (idProformaGenerada > 0)
                 {
                     MessageBox.Show($"¡Proforma guardada exitosamente!\nNúmero: {numeroProformaGenerado}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Mostramos el número en la caja de texto
                     txtNumeroProforma.Text = numeroProformaGenerado;
-
-                    // Limpiamos el formulario para la siguiente proforma
                     InicializarFormulario();
                 }
                 else
                 {
-                    // Si la lógica devuelve 0 pero no lanza excepción
                     MessageBox.Show("No se pudo guardar la proforma. Verifique los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                // Captura cualquier excepción que venga de 'logProforma' o 'datProforma'
-                // (Ej: "El cliente no es válido", "El DNI ya existe", "Error de SQL")
                 MessageBox.Show("Error al guardar: " + ex.Message, "Error Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            using (BuscarClienteSimple frm = new BuscarClienteSimple())
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    // Obtenemos el cliente seleccionado
+                    entCliente cliente = frm.ClienteSeleccionado;
+
+                    // Guardamos el ID en la variable
+                    _idClienteSeleccionado = cliente.idCliente;
+
+                    // Mostramos el nombre en la caja de texto visual
+                    txtClienteNombre.Text = cliente.Nom_razonSocial;
+                }
             }
         }
     }

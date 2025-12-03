@@ -60,19 +60,19 @@
             // 
             this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(126, 119);
+            this.dgvProductos.Location = new System.Drawing.Point(17, 80);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 62;
             this.dgvProductos.RowTemplate.Height = 28;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(462, 220);
+            this.dgvProductos.Size = new System.Drawing.Size(645, 317);
             this.dgvProductos.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(135, 370);
+            this.label2.Location = new System.Drawing.Point(33, 409);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             // numCantidad
             // 
-            this.numCantidad.Location = new System.Drawing.Point(228, 370);
+            this.numCantidad.Location = new System.Drawing.Point(116, 409);
             this.numCantidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -97,7 +97,7 @@
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(626, 152);
+            this.btnSeleccionar.Location = new System.Drawing.Point(680, 80);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(108, 47);
             this.btnSeleccionar.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(626, 222);
+            this.btnCancelar.Location = new System.Drawing.Point(680, 133);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(108, 39);
             this.btnCancelar.TabIndex = 6;

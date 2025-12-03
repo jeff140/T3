@@ -43,7 +43,7 @@ namespace CapaDatos
                     prod.stock = Convert.ToInt32(dr["stock"]);
                     prod.estProducto = Convert.ToBoolean(dr["estProducto"]);
                     prod.idCategoria = Convert.ToInt32(dr["idCategoria"]);
-                    //prod.nombreCategoria = Convert.ToString(dr["nombreCategoria"]);
+                    prod.nombreCategoria = Convert.ToString(dr["nombreCategoria"]);
                     lista.Add(prod);
                 }
             }

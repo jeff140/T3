@@ -16,6 +16,7 @@ namespace proyecto_T3
     {
         public entProformaItem ItemSeleccionado { get; private set; }
         private List<entProducto> listaProductos;
+        public List<entProformaItem> ItemsEnProformaActual { get; set; } = new List<entProformaItem>();
         public BuscarProductoSimple()
         {
             InitializeComponent();
@@ -33,10 +34,10 @@ namespace proyecto_T3
         {
             try
             {
-                // Usamos el Singleton de la capa LÓGICA
-                listaProductos = logProducto.Instancia.ListarProducto();
+                // CAMBIO: Usamos TU método nuevo y le pasamos la lista que recibimos de Proforma
+                listaProductos = logProducto.Instancia.ListarProductoDisponible(ItemsEnProformaActual);
 
-                // Mostramos la lista completa en la grilla
+                // Mostramos el resultado final
                 dgvProductos.DataSource = listaProductos;
             }
             catch (Exception ex)
@@ -47,77 +48,105 @@ namespace proyecto_T3
 
         private void ConfigurarGrillaProductos()
         {
+            // 1. Evitamos que se generen columnas automáticas "basura"
             dgvProductos.AutoGenerateColumns = false;
             dgvProductos.Columns.Clear();
 
-            // Usamos los ALIAS que definiste en 'spListarProducto'
+            // 2. IMPORTANTE: Desactivamos el auto-ajuste para permitir el SCROLL (Deslizamiento)
+            // Si estaba en 'Fill', las columnas se aplastaban. En 'None', aparece la barra de abajo.
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
 
+            // --- AHORA AGREGAMOS LAS COLUMNAS EN EL ORDEN QUE PEDISTE ---
+
+            // 1. ID Producto
+            dgvProductos.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "idProducto",
+                HeaderText = "ID",
+                DataPropertyName = "idProducto",
+                Width = 50, // Pequeño
+                Visible = true // Lo pediste visible
+            });
+
+            // 2. Nombre del Producto
             dgvProductos.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "Nombre",
-                HeaderText = "Producto",
-                DataPropertyName = "Nombre", // Alias de 'spListarProducto'
-                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                HeaderText = "Producto / Descripción",
+                DataPropertyName = "nombreProducto",
+                Width = 250 // Ancho generoso para que se lea el nombre completo
             });
 
+            // 3. Precio
             dgvProductos.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "Precio",
                 HeaderText = "Precio",
-                DataPropertyName = "Precio", // Alias de 'spListarProducto'
-                DefaultCellStyle = new DataGridViewCellStyle { Format = "C2" },
-                Width = 100
+                DataPropertyName = "precioUnitario",
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "C2", Alignment = DataGridViewContentAlignment.MiddleRight },
+                Width = 80
             });
 
+            // Stock
             dgvProductos.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "Stock",
-                HeaderText = "Stock",
-                DataPropertyName = "Stock", // Alias de 'spListarProducto'
-                Width = 60
+                HeaderText = "Stock Disp.",
+                DataPropertyName = "stock",
+                Width = 70,
+                DefaultCellStyle = new DataGridViewCellStyle { Alignment = DataGridViewContentAlignment.MiddleCenter, Font = new System.Drawing.Font(dgvProductos.Font, System.Drawing.FontStyle.Bold) }
             });
 
-            // Ocultamos el ID, no necesitamos mostrarlo
+            // 5. ID Categoría
             dgvProductos.Columns.Add(new DataGridViewTextBoxColumn
             {
-                Name = "idProducto",
-                DataPropertyName = "idProducto",
-                Visible = false
+                Name = "idCategoria",
+                HeaderText = "ID Cat.",
+                DataPropertyName = "idCategoria",
+                Width = 60,
+                Visible = true // Lo pediste visible
+            });
+
+            // 6. Descripción de la Categoría
+            dgvProductos.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "Categoria",
+                HeaderText = "Categoría",
+                DataPropertyName = "nombreCategoria",
+                Width = 150
             });
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            // 1. Validar fila
             if (dgvProductos.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar un producto de la lista.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un producto.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // 2. Obtener cantidad (Opción A: int)
-            // numCantidad.Value devuelve 'decimal', lo convertimos a int
+            entProducto productoElegido = (entProducto)dgvProductos.CurrentRow.DataBoundItem;
             int cantidad = (int)numCantidad.Value;
+
+            // Validación de Stock (Usa el stock visualmente restado)
+            if (cantidad > productoElegido.stock)
+            {
+                MessageBox.Show($"Stock insuficiente. Solo quedan {productoElegido.stock} unidades disponibles para agregar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             if (cantidad <= 0)
             {
-                MessageBox.Show("La cantidad debe ser 1 o más.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La cantidad debe ser mayor a 0.", "Validación");
                 return;
             }
 
-            // 3. Obtener el producto de la fila seleccionada
-            // (Es más seguro obtener el objeto completo que leer celda por celda)
-            entProducto productoElegido = (entProducto)dgvProductos.CurrentRow.DataBoundItem;
-
-            // 4. Crear el EntProformaItem que devolveremos
             ItemSeleccionado = new entProformaItem();
             ItemSeleccionado.IdProducto = productoElegido.idProducto;
-            ItemSeleccionado.NombreProducto = productoElegido.nombreProducto; // 'Nombre' es el alias del SP
-            ItemSeleccionado.PrecioUnitario = productoElegido.precioUnitario; // 'Precio' es el alias del SP
-            ItemSeleccionado.Cantidad = cantidad; // Cantidad (int)
-            // El 'Subtotal' se calculará en FormProforma
+            ItemSeleccionado.NombreProducto = productoElegido.nombreProducto;
+            ItemSeleccionado.PrecioUnitario = productoElegido.precioUnitario;
+            ItemSeleccionado.Cantidad = cantidad;
 
-            // 5. Cerrar el formulario con resultado "OK"
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

@@ -16,7 +16,6 @@ namespace CapaEntidad
         public Boolean estProducto { get; set; }
         public int idCategoria { get; set; }
 
-        // Propiedad adicional para mostrar el nombre de la categoría
-        //public string nombreCategoria { get; set; }
+        public string nombreCategoria { get; set; }
     }
 }

@@ -102,7 +102,12 @@
     <Compile Include="BuscarProductoSimple.Designer.cs">
       <DependentUpon>BuscarProductoSimple.cs</DependentUpon>
     </Compile>
-    <!-- Se movieron estas dos líneas a la sección de Compile -->
+    <Compile Include="BuscarClienteSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarClienteSimple.Designer.cs">
+      <DependentUpon>BuscarClienteSimple.cs</DependentUpon>
+    </Compile>    
     <Compile Include="ventaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarProductoSimple.resx">
       <DependentUpon>BuscarProductoSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarClienteSimple.resx">
+      <DependentUpon>BuscarClienteSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ventaProducto.resx">
       <DependentUpon>ventaProducto.cs</DependentUpon>
