@@ -12,6 +12,15 @@ namespace CapaLogica
     {
         private datProducto datos = new datProducto();
 
+
+        // LOGPRODUCTO.CS (Añadir dentro de la región #region metodos)
+
+        public void DeshabilitarProducto(entProducto prod)
+        {
+            // Llama directamente a la Capa de Datos
+            datProducto.Instancia.DeshabilitarProducto(prod);
+        }
+
         public entProducto ObtenerProductoPorId(int idProducto)
         {
             return datos.ObtenerProductoPorId(idProducto);
@@ -47,10 +56,16 @@ namespace CapaLogica
         }
 
         // Deshabilita
-        public void DeshabilitarProducto(entProducto prod)
+       
+        #endregion metodos
+
+        #region metodos
+        
+        public List<entProducto> BuscarProducto(string textoBusqueda)
         {
-            datProducto.Instancia.DeshabilitarProducto(prod);
+            return datProducto.Instancia.BuscarProducto(textoBusqueda);
         }
         #endregion metodos
+
     }
 }

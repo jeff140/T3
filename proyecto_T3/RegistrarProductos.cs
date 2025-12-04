@@ -9,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace proyecto_T3
 {
     public partial class RegistrarProductos : Form
     {
-        private bool esNuevo = false;
+        // 🚨 VARIABLE 'esNuevo' ELIMINADA (Línea 16 corregida)
+
         public RegistrarProductos()
         {
             InitializeComponent();
@@ -76,6 +78,7 @@ namespace proyecto_T3
 
         private void HabilitarControles()
         {
+            txtCodigoProducto.Enabled = false;
             txtNombre.Enabled = true;
             txtPrecio.Enabled = true;
             txtStock.Enabled = true;
@@ -88,14 +91,11 @@ namespace proyecto_T3
             txtPrecio.Enabled = false;
             txtStock.Enabled = false;
             cmbCategoria.Enabled = false;
-        }
-        private void btnregistrar_Click(object sender, EventArgs e)
-        {
-          
+            txtCodigoProducto.Enabled = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            esNuevo = true;
+            // esNuevo = true; <-- ELIMINADO
             LimpiarCampos();
             HabilitarControles();
             btnGuardar.Enabled = true;
@@ -103,56 +103,67 @@ namespace proyecto_T3
             btnNuevo.Enabled = false;
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
+            txtCodigoProducto.Clear();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(txtNombre.Text))
-                {
-                    MessageBox.Show("Ingrese el nombre del producto");
-                    return;
-                }
-
-                if (string.IsNullOrEmpty(txtPrecio.Text))
-                {
-                    MessageBox.Show("Ingrese el precio del producto");
-                    return;
-                }
-
-                if (cmbCategoria.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Seleccione una categoría");
-                    return;
-                }
-
                 entProducto prod = new entProducto();
-                prod.nombreProducto = txtNombre.Text.Trim();
-                prod.unidadMedida = "UND"; // Puedes agregar un control para esto
-                prod.precioUnitario = decimal.Parse(txtPrecio.Text);
-                prod.stock = (int)txtStock.Value;
-                prod.estProducto = true;
-                prod.idCategoria= (int)cmbCategoria.SelectedValue;
+                int idProducto = 0;
 
-                if (esNuevo)
+                // 1. DETERMINAR SI ES MODIFICACIÓN Y LEER ID
+                bool esModificacion = int.TryParse(txtCodigoProducto.Text.Trim(), out idProducto) && idProducto > 0;
+
+                // 2. SOLUCIÓN NULLREFERENCEEXCEPTION 
+                if (cmbCategoria.SelectedValue == null)
                 {
-                    logProducto.Instancia.ListarProducto();
-                    MessageBox.Show("Producto registrado exitosamente");
+                    MessageBox.Show("Debe seleccionar una Categoría válida.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 3. CARGAR EL RESTO DE PARÁMETROS
+                if (esModificacion)
+                {
+                    prod.idProducto = idProducto;
+                }
+
+                prod.unidadMedida = "UND";
+
+                prod.nombreProducto = txtNombre.Text.Trim();
+
+                if (!decimal.TryParse(txtPrecio.Text.Trim(), out decimal precio))
+                {
+                    MessageBox.Show("El precio unitario no es un valor numérico válido.", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                prod.precioUnitario = precio;
+
+                prod.stock = (int)txtStock.Value;
+                prod.idCategoria = (int)cmbCategoria.SelectedValue;
+                prod.estProducto = true;
+
+                // 4. LÓGICA DE EDICIÓN O INSERCIÓN 
+                if (esModificacion)
+                {
+                    logProducto.Instancia.EditarProducto(prod);
+                    MessageBox.Show("Producto modificado con éxito.");
                 }
                 else
                 {
-                    prod.idProducto = int.Parse(txtCodigoProducto.Text);
-                    logProducto.Instancia.EditarProducto(prod);
-                    MessageBox.Show("Producto actualizado exitosamente");
+                    logProducto.Instancia.InsertarProducto(prod);
+                    MessageBox.Show("Producto registrado con éxito.");
                 }
 
+                // 5. FINALIZAR
                 ListarProductos();
                 btnCancelar_Click(sender, e);
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar: " + ex.Message);
+                MessageBox.Show("Error al guardar/modificar: " + ex.Message);
             }
         }
 
@@ -164,8 +175,10 @@ namespace proyecto_T3
                 return;
             }
 
-            esNuevo = false;
+            // esNuevo = false; <-- ELIMINADO
             HabilitarControles();
+            txtCodigoProducto.Enabled = false;
+
             btnGuardar.Enabled = true;
             btnCancelar.Enabled = true;
             btnNuevo.Enabled = false;
@@ -175,32 +188,32 @@ namespace proyecto_T3
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (string.IsNullOrEmpty(txtCodigoProducto.Text))
                 {
-                    MessageBox.Show("Seleccione un producto para eliminar");
+                    MessageBox.Show("Seleccione un producto para eliminar/deshabilitar.", "Advertencia");
                     return;
                 }
 
-                DialogResult result = MessageBox.Show("¿Está seguro de eliminar este producto?",
-                    "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult r = MessageBox.Show("¿Está seguro que desea deshabilitar este producto?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (result == DialogResult.Yes)
+                if (r == DialogResult.Yes)
                 {
                     entProducto prod = new entProducto();
-                    prod.idProducto = int.Parse(txtCodigoProducto.Text);
+                    prod.idProducto = int.Parse(txtCodigoProducto.Text.Trim());
 
                     logProducto.Instancia.DeshabilitarProducto(prod);
-                    MessageBox.Show("Producto eliminado exitosamente");
+
+                    MessageBox.Show("Producto deshabilitado exitosamente.");
+
                     ListarProductos();
                     btnCancelar_Click(sender, e);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al eliminar: " + ex.Message);
+                MessageBox.Show("Error al deshabilitar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -213,7 +226,7 @@ namespace proyecto_T3
             btnNuevo.Enabled = true;
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
-            esNuevo = false;
+            // esNuevo = false; <-- ELIMINADO
         }
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -247,8 +260,7 @@ namespace proyecto_T3
                 {
                     var listaProductos = logProducto.Instancia.ListarProducto();
                     var productosFiltrados = listaProductos.Where(p =>
-                        p.nombreProducto.ToLower().Contains(txtBuscar.Text.ToLower())
-                    //|| p.nombreCategoria.ToLower().Contains(txtBuscar.Text.ToLower())
+                         p.nombreProducto.ToLower().Contains(txtBuscar.Text.ToLower())
                     ).ToList();
 
                     dgvProductos.DataSource = productosFiltrados;
@@ -260,9 +272,29 @@ namespace proyecto_T3
             }
         }
 
-        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void txtCodigoProducto_TextChanged(object sender, EventArgs e) { }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string texto = txtBuscar.Text.Trim();
+                if (string.IsNullOrEmpty(texto))
+                {
+                    ListarProductos();
+                    return;
+                }
+
+                List<entProducto> listaFiltrada = logProducto.Instancia.BuscarProducto(texto);
+
+                dgvProductos.DataSource = listaFiltrada;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar productos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

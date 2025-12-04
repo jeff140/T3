@@ -37,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.txtStock = new System.Windows.Forms.NumericUpDown();
@@ -47,6 +46,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.groupBoxProducto = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock)).BeginInit();
             this.groupBoxProducto.SuspendLayout();
@@ -72,6 +72,7 @@
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(248, 20);
             this.txtCodigoProducto.TabIndex = 45;
+            this.txtCodigoProducto.TextChanged += new System.EventHandler(this.txtCodigoProducto_TextChanged);
             // 
             // label5
             // 
@@ -135,16 +136,6 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(35, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 15);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Buscar:";
-            // 
             // dgvProductos
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -152,6 +143,7 @@
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.Size = new System.Drawing.Size(404, 425);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // cmbCategoria
             // 
@@ -207,7 +199,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(96, 69);
+            this.txtBuscar.Location = new System.Drawing.Point(166, 79);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(248, 22);
             this.txtBuscar.TabIndex = 13;
@@ -226,9 +218,9 @@
             // 
             // groupBoxProducto
             // 
-            this.groupBoxProducto.BackColor = System.Drawing.Color.LightBlue;
+            this.groupBoxProducto.BackColor = System.Drawing.Color.Moccasin;
+            this.groupBoxProducto.Controls.Add(this.btnBuscar);
             this.groupBoxProducto.Controls.Add(this.txtBuscar);
-            this.groupBoxProducto.Controls.Add(this.label6);
             this.groupBoxProducto.Controls.Add(this.dgvProductos);
             this.groupBoxProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxProducto.Location = new System.Drawing.Point(550, 15);
@@ -238,26 +230,38 @@
             this.groupBoxProducto.TabStop = false;
             this.groupBoxProducto.Text = "Lista de Productos ";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.SlateGray;
+            this.btnBuscar.Location = new System.Drawing.Point(64, 71);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(84, 39);
+            this.btnBuscar.TabIndex = 14;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // RegistrarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Sienna;
             this.ClientSize = new System.Drawing.Size(1091, 640);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.txtCodigoProducto);
+            this.Controls.Add(this.txtStock);
+            this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtCodigoProducto);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.cmbCategoria);
-            this.Controls.Add(this.txtStock);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.groupBoxProducto);
             this.Name = "RegistrarProductos";
             this.Text = "RegistrarProductos";
@@ -281,7 +285,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.NumericUpDown txtStock;
@@ -291,5 +294,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.GroupBox groupBoxProducto;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
