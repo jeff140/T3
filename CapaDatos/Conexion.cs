@@ -20,9 +20,8 @@ namespace CapaDatos
         public SqlConnection Conectar()
         {
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Data Source=DESKTOP-OSGAFHN\\SQLEXPRESS;Initial Catalog=MADERERA_HUASCARAN;Integrated Security=true"; 
-
-                return cn;
+            cn.ConnectionString = "Data Source=.\\SQLEXPRESS01;Initial Catalog=MADERERA_HUASCARAN;Integrated Security=true";
+            return cn;
         }
     }
 }

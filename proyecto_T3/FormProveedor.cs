@@ -394,5 +394,12 @@ namespace proyecto_T3 // O el namespace que tenga tu proyecto CapaPresentacionT3
         {
             limpiarCampos();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Crear y abrir la nueva ventana como un diálogo (bloquea la ventana de atrás)
+            frmBusquedaProveedor ventanaBusqueda = new frmBusquedaProveedor();
+            ventanaBusqueda.ShowDialog();
+        }
     }
 }

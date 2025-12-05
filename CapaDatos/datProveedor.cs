@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using CapaEntidad; 
+using CapaEntidad;
 
 namespace CapaDatos
 {
@@ -19,16 +19,64 @@ namespace CapaDatos
 
         #region Metodos
 
-        // --- MÉTODO PARA LISTAR ---
+        // --- MÉTODO PARA LISTAR TODOS ---
         public List<entProveedor> ListarProveedores()
         {
             SqlCommand cmd = null;
             List<entProveedor> lista = new List<entProveedor>();
             try
             {
-                SqlConnection cn = Conexion.Instancia.Conectar(); 
-                cmd = new SqlCommand("sp_ListarProveedores", cn); 
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("sp_ListarProveedores", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    entProveedor prov = new entProveedor();
+                    prov.idProveedor = Convert.ToInt32(dr["idProveedor"]);
+                    prov.razonSocial = dr["razonSocial"].ToString();
+                    prov.ruc = dr["ruc"].ToString();
+                    prov.telefono = dr["telefono"].ToString();
+                    prov.direccion = dr["direccion"].ToString();
+                    // Usamos estProveedor como aparece en tu código original
+                    prov.estProveedor = Convert.ToBoolean(dr["estProveedor"]);
+                    lista.Add(prov);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection.State == ConnectionState.Open)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return lista;
+        }
+
+        // --- [NUEVO] MÉTODO PARA LISTAR POR ESTADO (Activo/Inactivo) ---
+        public List<entProveedor> ListarPorEstado(bool estado)
+        {
+            SqlCommand cmd = null;
+            List<entProveedor> lista = new List<entProveedor>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+
+                // Usamos una consulta directa para filtrar por la columna estProveedor
+                string query = "SELECT idProveedor, razonSocial, ruc, telefono, direccion, estProveedor FROM PROVEEDOR WHERE estProveedor = @estado";
+
+                cmd = new SqlCommand(query, cn);
+                cmd.CommandType = CommandType.Text;
+
+                // Pasamos el parámetro (true o false)
+                cmd.Parameters.AddWithValue("@estado", estado);
+
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
 
@@ -65,7 +113,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("sp_InsertarProveedor", cn); 
+                cmd = new SqlCommand("sp_InsertarProveedor", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 // Pasamos los parámetros
@@ -73,6 +121,8 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@ruc", prov.ruc);
                 cmd.Parameters.AddWithValue("@telefono", prov.telefono);
                 cmd.Parameters.AddWithValue("@direccion", prov.direccion);
+                // Si tu SP requiere el estado, descomenta la siguiente línea:
+                // cmd.Parameters.AddWithValue("@estProveedor", prov.estProveedor);
 
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -97,7 +147,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("sp_ActualizarProveedor", cn); // Llama al SP
+                cmd = new SqlCommand("sp_ActualizarProveedor", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 // Pasamos los parámetros
@@ -129,7 +179,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("sp_EliminarProveedor", cn); // Llama al SP
+                cmd = new SqlCommand("sp_EliminarProveedor", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 // Pasamos el ID del proveedor

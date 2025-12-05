@@ -15,6 +15,8 @@ namespace CapaEntidad
         public string telefono { get; set; }
         public string direccion { get; set; }
         public bool estProveedor { get; set; }
+        public bool Estado { get; set; }
+
 
         // Propiedad adicional opcional para mostrar estado como texto
         public string estadoDescripcion
@@ -24,5 +26,7 @@ namespace CapaEntidad
                 return estProveedor ? "Activo" : "Inactivo";
             }
         }
+
+        
     }
 }

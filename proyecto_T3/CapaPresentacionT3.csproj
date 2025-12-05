@@ -58,6 +58,12 @@
     <Compile Include="FormProveedor.Designer.cs">
       <DependentUpon>FormProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBusquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaProveedor.Designer.cs">
+      <DependentUpon>frmBusquedaProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,7 +113,7 @@
     </Compile>
     <Compile Include="BuscarClienteSimple.Designer.cs">
       <DependentUpon>BuscarClienteSimple.cs</DependentUpon>
-    </Compile>    
+    </Compile>
     <Compile Include="ventaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormProveedor.resx">
       <DependentUpon>FormProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaProveedor.resx">
+      <DependentUpon>frmBusquedaProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>
